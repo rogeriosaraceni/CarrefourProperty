@@ -1,0 +1,96 @@
+/* --------------------------------------------------------------------
+* - import fonts
+---------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+
+@font-face {
+    font-family: 'Banana Yeti';
+    src: url('../fonts/bananaYeti/BananaYeti-ExtraBold.woff2') format('woff2'),
+         url('../fonts/bananaYeti/BananaYeti-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* --------------------------------------------------------------------
+* - variables
+---------------------------------------------------------------------- */
+:root{
+    --color-azul:        #2e4491;
+    --color-azul-claro:  #7ca1be;
+    --color-azul-escuro: #2b3558;
+    --color-cinza:       #efefef;
+    --color-vermelho:    #c20016;
+    --color-verde:       #44802f;
+    --color-laranja:     #f15e33;
+    --color-roxo:        #8d2562;
+    --color-vinho:       #860010;
+}
+
+.text-app-azul       { color: var(--color-azul);}
+.text-app-azul-claro { color: var(--color-azul-claro);}
+.text-app-azul-escuro{ color: var(--color-azul-escuro);}
+.text-app-cinza      { color: var(--color-cinza);}
+.text-app-vermelho   { color: var(--color-vermelho);}
+.text-app-verde      { color: var(--color-verde);}
+.text-app-laranja    { color: var(--color-laranja);}
+.text-app-roxo       { color: var(--color-roxo);}
+.text-app-vinho      { color: var(--color-vinho);}
+
+.bg-app-azul       { background-color: var(--color-azul);}
+.bg-app-azul-claro { background-color: var(--color-azul-claro);}
+.bg-app-azul-escuro{ background-color: var(--color-azul-escuro);}
+.bg-app-cinza      { background-color: var(--color-cinza);}
+.bg-app-vermelho   { background-color: var(--color-vermelho);}
+.bg-app-verde      { background-color: var(--color-verde);}
+.bg-app-laranja    { background-color: var(--color-laranja);}
+.bg-app-roxo       { background-color: var(--color-roxo);}
+.bg-app-vinho      { background-color: var(--color-vinho);}
+
+/* --------------------------------------------------------------------
+* - body
+---------------------------------------------------------------------- */
+html{
+    height: 100%;
+}
+
+body{
+    position: relative;
+    background-color: var(--color-cinza);
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-app{
+    flex: 1;
+}
+
+/* --------------------------------------------------------------------
+* - Scrollbar CSS v1.2
+* - Last update: 06 jul 2021
+* - Rogerio Saraceni
+* -------------------------------------------------------------------- */
+:root {
+    --scrollbar-bg: #f7f2f2;
+    --scrollbar-bg-track: #bebcbc;
+    --scrollbar-bg-thumb: #bbb5b5;
+}
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-bg-track) var(--scrollbar-bg);
+}
+/* Works on Chrome, Edge, and Safari */
+::-webkit-scrollbar { width: 10px;}
+::-webkit-scrollbar { height: 10px;}
+::-webkit-scrollbar-track { background: var(--scrollbar-bg);}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--scrollbar-bg-track);
+}
