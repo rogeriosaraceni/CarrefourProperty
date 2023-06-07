@@ -21172,7 +21172,7 @@ body {
 
 .box-left {
   z-index: 1;
-  background-color: var(--color-azul);
+  background-color: var(--color-roxo);
   grid-area: box-left;
   justify-content: center;
   align-items: center;
@@ -21205,7 +21205,7 @@ body {
 
 .content-box-right .canvas {
   z-index: 1;
-  width: 200px;
+  width: 300px;
   background-image: url("canvas-right.1012afaf.svg");
   background-position: right 0 top 0;
   background-repeat: no-repeat;
@@ -21255,13 +21255,13 @@ body {
 }
 
 .title-login {
-  color: var(--color-azul);
+  color: var(--color-roxo);
   font-family: Banana Yeti;
   font-size: 3rem;
 }
 
 .form-control {
-  --placehorder-color-text: var(--color-azul);
+  --placehorder-color-text: var(--color-roxo);
   height: 50px;
   background: #ffffff73;
   border: 1px solid #0000;
@@ -21320,7 +21320,7 @@ body {
 
 .btn-submit:hover, .btn-submit:focus {
   box-shadow: none;
-  background-color: var(--color-azul);
+  background-color: var(--color-roxo);
   color: #fff !important;
   border-color: #0000 !important;
 }
