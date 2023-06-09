@@ -21129,6 +21129,10 @@ body {
   overflow-x: hidden;
 }
 
+.logo-main {
+  max-width: 130px;
+}
+
 .main-app {
   flex: 1;
 }
@@ -21235,7 +21239,7 @@ body {
 
 .logo-login-horizontal {
   z-index: 1;
-  max-width: 350px;
+  max-width: 150px;
   margin-bottom: 2rem;
   display: none;
 }
