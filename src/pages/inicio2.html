@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <include src="./includes/head.html"></include>
+    </head>
+
+    <body>
+        <include src="./includes/header.html"></include>
+
+        <include src="./includes/nav-mods.html"></include>
+
+        <main class="main-app">
+            <section class="container-fluid h-100">
+                <div class="row py-5 px-2 slide-in-blurred-bottom principal-cards" data-js="cards">
+                </div>
+            </section>
+        </main>
+
+        <include src="./includes/footer.html"></include>
+
+        <script>
+            const cards = [
+                {
+                    name:"Ficha Técnica",
+                    icon:"bi bi-file-earmark-ruled",
+                    link: "#"
+                },
+                {
+                    name:"DOS",
+                    icon:"bi bi-currency-exchange",
+                    link: "#"
+                },
+                {
+                    name:"Galerias",
+                    icon:"bi bi-columns",
+                    link: "#"
+                },
+                {
+                    name:"Projetos",
+                    icon:"bi bi-clipboard2-check",
+                    link: "#"
+                },
+                {
+                    name:"Manutenção",
+                    icon:"bi bi-gear",
+                    link: "#"
+                },
+                {
+                    name:"Eventos Temporários",
+                    icon:"bi bi-hourglass",
+                    link: "#"
+                }
+            ]
+
+            const cardsContainer = document.querySelector('[data-js="cards"]')
+
+            function generateCardsTemplate(cards){
+                let html = ""
+
+                cards.forEach((card) => {
+                    html += `
+                        <a class="link-card col-lg-2 col-md-4 col-sm-6" href="${card.link}">
+                            <figure>
+                                <div class="content-icon">
+                                    <i class="${card.icon}"></i>
+                                </div>
+                            </figure>
+                            <h4>${card.name}</h4>
+                        </a>
+                    `
+                })
+                return html;
+            }
+
+            cardsContainer.innerHTML = generateCardsTemplate(cards)
+        </script>
+    </body>
+</html>
