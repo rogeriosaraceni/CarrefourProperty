@@ -1,18 +1,39 @@
-# Logs
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# logs
 logs
 *.log
+
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# dependencies
 node_modules
 dist
 dist-ssr
 *.local
-
 .parcel-cache
+
+# testing
+/coverage
+
+# production
+/build
+/dist
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
 
 # Editor directories and files
 .vscode/*
