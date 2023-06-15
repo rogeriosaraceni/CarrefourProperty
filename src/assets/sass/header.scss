@@ -4,68 +4,60 @@
 .header-app .navbar-brand img {
     max-width: 110px;
 }
-.header-app .navbar-collapse .nav-link:hover {
+
+.nav-item.dropdown.active > .nav-link.dropdown-toggle{
     color: #fff;
+}
+.dropdown-item.active,
+.dropdown-item:active {
     background-color: var(--color-roxo);
 }
-.header-app .navbar-collapse .nav-link.active,
-.header-app .navbar-collapse .dropdown-item.active {
-    color: #fff;
-    background-color: var(--color-roxo);
+
+.dropstart .dropdown-toggle,
+.dropend .dropdown-toggle {
+    color: var(--bs-dropdown-color)!important;
 }
 
-.header-app .nav-item.dropdown.active .nav-link.dropdown-toggle{
-    color: #fff;
+.dropdown-item:hover,
+.dropstart:hover .dropdown-toggle,
+.dropend:hover .dropdown-toggle {
+    color: #fff!important;
+    background-color: var(--color-laranja);
 }
 
+.dropstart .dropdown-toggle,
+.dropend .dropdown-toggle {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+.dropstart .dropdown-toggle { padding-right: 1em !important;}
+.dropend .dropdown-toggle   { padding-left: 1em !important;}
 
-// efeito hover
-@media (min-width: 1200px) {
-    .header-app .dropdown .dropdown-menu{
-        // display: block;
-        // opacity: 0;
-        // visibility: hidden;
-        transition: all 0.2s;
+@media screen and (min-width: 1200px) {
+    .dropdown .dropdown-menu {
+        display: none;
     }
-    .header-app .dropdown:hover .dropdown-menu {
+
+    .dropdown:hover>.dropdown-menu,
+    .dropend:hover>.dropdown-menu {
         display: block;
-        margin-top: 0;
-        // opacity: 1;
-        // visibility: visible;
+        margin-top: 0em;
+    }
+
+    .dropend:hover>.dropdown-menu {
+        position: absolute;
+        top: 0;
+        left: 100%;
     }
 }
 
 
-
-
-/* navbar-toggler */
-.header-app .navbar-toggler {
-    padding: 0 0.5rem;
-    transition: all 0.3s;
-}
-.header-app .navbar-toggler:hover {
-    background-color: #eee;
-}
-.header-app .navbar-toggler:focus {
-    box-shadow: none!important;
-}
-
-.header-app .navbar-toggler-icon {
-    width: 1.5em;
-    height: 1.5em;
-}
-
-/* media */
-@media (max-width: 1200px) {
-    .header-app #navbarMain .nav-link {
-        padding: 0.5rem 0.5rem;
-        border-bottom: 1px solid #555;
-    }
-
+/* offcanvas-collapse (custom) */
+@media screen and (max-width: 1200px) {
     .offcanvas-collapse {
         position: fixed;
-        top: 99px;
         /* Height of navbar */
+        top: 57px;
         bottom: 0;
         left: 100%;
         width: 100%;
@@ -73,6 +65,7 @@
         padding-left: 1rem;
         overflow-y: auto;
         visibility: hidden;
+        background-color: var(--color-roxo);
         transition: transform .3s ease-in-out, visibility .3s ease-in-out;
     }
 
