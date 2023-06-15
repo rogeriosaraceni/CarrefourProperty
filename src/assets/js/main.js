@@ -1,8 +1,21 @@
+/* ////////////////////////////////////////////////////////////////////
+ *
+ *  JS APP
+ *
+ * - Imports
+ * - DOMPurif protect xss
+ * - mostra senha
+ * - currentYear
+ * - navbarSideCollapse
+ * - navigation-active
+ * -
+ *
+ * //////////////////////////////////////////////////////////////////// */
+
+
 /*! --------------------------------------------------------------------
  * Imports
  * --------------------------------------------------------------------*/
-import * as bootstrap from "bootstrap";
-import * as DOMPurify from "dompurify";
 
 /*! --------------------------------------------------------------------
  * DOMPurif protect xss
@@ -37,3 +50,30 @@ btnShowAllPassword.forEach((item) => {
  * --------------------------------------------------------------------*/
 const currentYear = new Date().getFullYear();
 document.querySelector('[data-js="currentYear"]').textContent = currentYear;
+
+/* --------------------------------------------------------------------
+* - navbarSideCollapse
+---------------------------------------------------------------------- */
+(() => {
+    "use strict";
+    document
+        .querySelector("#navbarSideCollapse")
+        ?.addEventListener("click", () => {
+            document
+                .querySelector(".offcanvas-collapse")
+                .classList.toggle("open");
+        });
+})();
+
+/*! --------------------------------------------------------------------
+ * navigation-active
+ * --------------------------------------------------------------------*/
+document.addEventListener("DOMContentLoaded", function () {
+    const currentUrl = window.location.pathname;
+    const navLinks = document.querySelectorAll(
+        `.navbar-nav .nav-item a[href$="${currentUrl}"]`
+    );
+    navLinks.forEach(function (link) {
+        link.classList.add("active");
+    });
+});

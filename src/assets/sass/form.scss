@@ -1,0 +1,181 @@
+/* ////////////////////////////////////////////////////////////////////
+*
+*  CSS CORE form
+*  v2.1 - 23 Jun 2022
+*  Dev by: RogÃ©rio Saraceni
+*
+* - variables form
+* - form-control
+* - form-check-label
+* - form-group
+* - input-group-text
+* - label
+* - label-clearfix
+* - list-group-item
+* - custom-file
+* - wrapper-custom-file
+*
+* //////////////////////////////////////////////////////////////////// */
+
+/* --------------------------------------------------------------------
+* - variables form
+* -------------------------------------------------------------------- */
+:root {
+    --form-font-size-label: 0.9rem;
+    --form-font-size-control-form: 0.8rem;
+    --form-height: calc(1.3em + .85rem + 2px);
+    --form-color-check-radio: #4095f1;
+    --form-color-border-focus: #a8cff8;
+    --form-outline-offset-focus: +2px;
+    --form-background: #fff;
+}
+
+/* --------------------------------------------------------------------
+* - form-control
+* -------------------------------------------------------------------- */
+.form-control {
+    height: var(--form-height);
+    font-size: var(--font-size-default);
+    color: var(--font-color-default);
+    border-color: var(--border-color-default);
+    border-radius: var(--border-radius-default);
+    background-color: var(--form-background);
+}
+
+.form-control:focus {
+    border-color: var(--border-color-default);
+    outline-color: var(--form-color-border-focus) !important;
+    outline-offset: var(--form-outline-offset-focus) !important;
+    box-shadow: 0 0 0 0.2rem rgb(216 217 219 / 50%);
+}
+
+input[type="file"].form-control {
+    padding-top: 2px;
+    padding-left: 4px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"][readonly]::-webkit-outer-spin-button,
+input[type="number"][readonly]::-webkit-inner-spin-button {
+    -appearance: none;
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number][readonly] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+/* --------------------------------------------------------------------
+* - form-check-label
+* -------------------------------------------------------------------- */
+.form-check-label {
+    display: flex;
+    align-items: center;
+}
+
+/* --------------------------------------------------------------------
+* - form-group
+* -------------------------------------------------------------------- */
+.form-group {
+    margin-bottom: 0.5rem;
+}
+
+/* --------------------------------------------------------------------
+* - input-group-text
+* -------------------------------------------------------------------- */
+.input-group-text {
+    font-size: inherit;
+    padding: .175rem .75rem;
+}
+
+/* --------------------------------------------------------------------
+* - label
+* -------------------------------------------------------------------- */
+label {
+    margin-bottom: 0.5rem;
+}
+
+/* --------------------------------------------------------------------
+* - label-clearfix
+* -------------------------------------------------------------------- */
+.label-clearfix::before {
+    display: block;
+    clear: both;
+    content: "\00a0";
+    font-size: var(--font-size-default);
+}
+
+@media(max-width: 1200px) {
+    .label-clearfix.last-xl::before {
+        content: "";
+    }
+}
+
+@media (max-width: 992px) {
+    .label-clearfix.last-lg::before {
+        content: "";
+    }
+}
+
+@media (max-width: 768px) {
+    .label-clearfix.last-md::before {
+        content: "";
+    }
+}
+
+@media (max-width: 576px) {
+    .label-clearfix.last-sm::before {
+        content: "";
+    }
+}
+
+/* --------------------------------------------------------------------
+* - list-group-item
+* -------------------------------------------------------------------- */
+.list-group-item label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.list-group-item label span {
+    margin-left: 5px;
+}
+
+/* --------------------------------------------------------------------
+* - custom-file
+* -------------------------------------------------------------------- */
+.custom-file {
+    height: var(--form-height);
+    margin-bottom: 0;
+}
+
+.custom-file-input {
+    height: var(--form-height);
+    margin: 0;
+}
+
+.custom-file-label {
+    border-radius: 0.75rem 0.25rem 0.25rem 0.75rem;
+}
+
+/* --------------------------------------------------------------------
+* - wrapper-custom-file
+* -------------------------------------------------------------------- */
+.wrapper-custom-file {
+    position: relative;
+}
+
+.wrapper-custom-file .content-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper-custom-file .btns {
+    display: flex;
+    align-items: center;
+}

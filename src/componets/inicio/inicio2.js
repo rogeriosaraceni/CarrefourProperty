@@ -2,32 +2,32 @@ const cards = [
     {
         name: "Ficha Técnica",
         icon: "bi bi-file-earmark-ruled",
-        link: "#",
+        link: "../ficha-tecnica/index.html",
     },
     {
         name: "DOS",
         icon: "bi bi-bar-chart",
-        link: "#",
+        link: "../dos/index.html",
     },
     {
         name: "Manutenção",
         icon: "bi bi-gear",
-        link: "#",
+        link: "../manutencao/index.html",
     },
     {
         name: "Operações Galerias",
         icon: "bi bi-columns",
-        link: "#",
+        link: "../operacoes-galerias/index.html",
     },
     {
         name: "Comercial",
         icon: "bi bi-buildings",
-        link: "#",
+        link: "../comercial/index.html",
     },
     {
         name: "Projetos Galerias",
         icon: "bi bi-clipboard2-check",
-        link: "#",
+        link: "../projetos-galerias/planta-galeria.html",
     },
 ];
 

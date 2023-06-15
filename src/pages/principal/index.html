@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <include src="./includes/head.html"></include>
+    </head>
+
+    <body>
+        <include src="./includes/header.html"></include>
+
+        <main class="main-app">
+            <section class="container-fluid">
+                <include src="./includes/nav-previa.html"></include>
+
+                <div class="row py-5 px-2 slide-in-blurred-bottom" data-js="cards"></div>
+
+                <!-- só para gerar dist por causa do array js -->
+                <div class="d-none">
+                    <a href="../ficha-tecnica/index.html">1</a>
+                    <a href="../dos/index.html">2</a>
+                    <a href="../manutencao/index.html">3</a>
+                    <a href="../operacoes-galerias/index.html">4</a>
+                    <a href="../comercial/index.html">5</a>
+
+                    <a href="../projetos-galerias/planta-galeria.html">6</a>
+                </div>
+            </section>
+        </main>
+
+        <include src="./includes/footer.html"></include>
+
+        <script src="../../componets/inicio/inicio.js"></script>
+    </body>
+</html>
