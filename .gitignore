@@ -22,7 +22,6 @@ dist-ssr
 /coverage
 
 # production
-/build
 /dist
 
 # local env files
