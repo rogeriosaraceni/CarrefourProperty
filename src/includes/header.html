@@ -1,26 +1,98 @@
-<header class="header-app navbar navbar-expand-xl bg-body-tertiary py-0 fixed-top shadow-sm">
-    <div class="d-flex flex-column w-100">
-        <div class="py-1 w-100 bg-app-roxo">
-            <section class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr">
-                <a class="navbar-brand d-flex align-items-center" href="">
-                    <img class="img-fluid slide-in-left logo-main" src="../../assets/images/logo-white.svg" alt="logo" />
-                </a>
+<header class="header-app">
+    <nav class="navbar navbar-expand-xl fixed-top navbar-dark bg-app-roxo py-1" aria-label="Main navigation">
+        <div class="container-fluid">
 
-                <div class="d-flex align-items-center justify-content-end">
+
+            <section class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 5fr 1fr">
+                <div class="d-flex">
+                    <a class="navbar-brand" href="#">
+                        <img class="img-fluid slide-in-left" src="../../assets/images/logo-white.svg" alt="logo" />
+                    </a>
+
+                    <div class="navbar-collapse offcanvas-collapse navbar-dark bg-app-roxo" id="navbarsExampleDefault">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../principal/index.html">Principal</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../ficha-tecnica/index.html">Ficha Técnica</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../dos/index.html">DOS</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../manutencao/index.html">Manutenção</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../operacoes-galerias/index.html">Operações Galerias</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../comercial/index.html">Comercial</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <!-- <a class="nav-link dropdown-toggle me-0 mb-1 me-xl-1 mb-xl-0" href="#"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                    Projetos Galerias
+                                </a> -->
+
+                                <a class="nav-link dropdown-toggle me-0 mb-1 me-xl-1 mb-xl-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" href="#">
+                                    Projetos Galerias
+                                </a>
+
+                                <ul class="dropdown-menu p-0">
+
+                                    <li class="dropstart">
+                                        <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" href="#">Submenu</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Item 1</a></li>
+                                            <li><a class="dropdown-item" href="#">Item 2</a></li>
+                                            <li><a class="dropdown-item" href="#">Item 3</a></li>
+                                        </ul>
+                                    </li>
+
+
+
+
+
+
+
+                                    <li>
+                                        <a class="dropdown-item" href="../projetos-galerias/planta-galeria.html">Planta Galeria</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="dropdown-item" href="../projetos-galerias/evento-temporario.html">Evento Temporário</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="dropdown-item" href="../projetos-galerias/lojas.html">Lojas</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="dropdown-item" href="../projetos-galerias/quiosque.html">Quiosque</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="dropdown-item" href="../projetos-galerias/cadastro-luc.html">Cadastro LUC</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-end gap-3">
                     <div class="flex-shrink-0 dropdown">
-                        <a
-                            href="#"
-                            class="d-flex align-items-center link-light text-decoration-none dropdown-toggle gap-2 slide-in-right"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                        >
-                            <img
-                                src="https://cdn-icons-png.flaticon.com/128/2099/2099220.png"
-                                alt="mdo"
-                                width="32"
-                                height="32"
-                                class="rounded-circle"
-                            />
+                        <a href="#" class="d-flex align-items-center link-light text-decoration-none dropdown-toggle gap-2 slide-in-right"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://cdn-icons-png.flaticon.com/128/2099/2099220.png" alt="mdo" width="32" height="32"
+                                class="rounded-circle" />
 
                             <div class="d-flex flex-column">
                                 <span class="lh-1">Administrador</span>
@@ -44,75 +116,12 @@
                             </li>
                         </ul>
                     </div>
+
+                    <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                 </div>
             </section>
         </div>
-
-        <nav class="container-fluid py-1 nav-main">
-            <button class="navbar-toggler ms-1" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="navbar-collapse offcanvas-collapse flex-xl-1 bg-body-tertiary" id="navbarMain">
-                <ul class="navbar-nav my-2 my-xl-0">
-                    <li class="nav-item">
-                        <a class="nav-link border rounded me-0 mb-1 me-xl-1 mb-xl-0" href="../principal/index.html">Principal</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link border rounded me-0 mb-1 me-xl-1 mb-xl-0" href="../ficha-tecnica/index.html">Ficha Técnica</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link border rounded me-0 mb-1 me-xl-1 mb-xl-0" href="../dos/index.html">DOS</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link border rounded me-0 mb-1 me-xl-1 mb-xl-0" href="../manutencao/index.html">Manutenção</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link border rounded me-0 mb-1 me-xl-1 mb-xl-0" href="../operacoes-galerias/index.html">Operações Galerias</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link border rounded me-0 mb-1 me-xl-1 mb-xl-0" href="../comercial/index.html">Comercial</a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a
-                        class="nav-link dropdown-toggle dropdown-toggle-animation border rounded me-0 mb-1 me-xl-1 mb-xl-0"
-                        href="#"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                            <span>Projetos Galerias</span>
-                        </a>
-
-                        <ul class="dropdown-menu dropdown-menu-animation p-0 overflow-hidden">
-                            <li>
-                                <a class="dropdown-item" href="../projetos-galerias/planta-galeria.html">Planta Galeria</a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item" href="../projetos-galerias/evento-temporario.html">Evento Temporário</a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item" href="../projetos-galerias/lojas.html">Lojas</a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item" href="../projetos-galerias/quiosque.html">Quiosque</a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item" href="../projetos-galerias/cadastro-luc.html">Cadastro LUC</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+    </nav>
 </header>

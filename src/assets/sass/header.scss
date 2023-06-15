@@ -1,5 +1,8 @@
-.header-app .navbar-collapse .nav-link {
-    padding: 0rem 0.5rem;
+.header-app{
+    margin-bottom: 0.75rem;
+}
+.header-app .navbar-brand img {
+    max-width: 110px;
 }
 .header-app .navbar-collapse .nav-link:hover {
     color: #fff;
@@ -10,6 +13,30 @@
     color: #fff;
     background-color: var(--color-roxo);
 }
+
+.header-app .nav-item.dropdown.active .nav-link.dropdown-toggle{
+    color: #fff;
+}
+
+
+// efeito hover
+@media (min-width: 1200px) {
+    .header-app .dropdown .dropdown-menu{
+        // display: block;
+        // opacity: 0;
+        // visibility: hidden;
+        transition: all 0.2s;
+    }
+    .header-app .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+        // opacity: 1;
+        // visibility: visible;
+    }
+}
+
+
+
 
 /* navbar-toggler */
 .header-app .navbar-toggler {
@@ -29,12 +56,6 @@
 }
 
 /* media */
-@media (max-width: 1300px) {
-    .header-app .navbar-brand img {
-        max-width: 170px;
-    }
-}
-
 @media (max-width: 1200px) {
     .header-app #navbarMain .nav-link {
         padding: 0.5rem 0.5rem;
@@ -58,11 +79,5 @@
     .offcanvas-collapse.open {
         visibility: visible;
         transform: translateX(-100%);
-    }
-}
-
-@media (max-width: 576px) {
-    .header-app .navbar-brand img {
-        max-width: 120px;
     }
 }

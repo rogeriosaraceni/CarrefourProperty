@@ -65,14 +65,10 @@ body{
     flex-direction: column;
 }
 
-.logo-main{
-    max-width: 130px;
-}
-
-.main-app{
+.main-app {
     flex: 1;
-    padding-top: 96px;
-    padding-bottom: 16px;
+    padding-top: 3.5rem;
+    padding-bottom: 1rem;
 }
 
 /* --------------------------------------------------------------------
@@ -104,34 +100,24 @@ body{
 /* --------------------------------------------------------------------
 * - breadcrumb-app
 ---------------------------------------------------------------------- */
-.breadcrumb-app{
-    margin-bottom: 1rem;
-    padding: 0.5rem 0;
-    background-color: var(--color-laranja);
+.breadcrumb-app .card.card-body {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
 }
-
-.breadcrumb-app .content-breadcrumb{
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.breadcrumb-app .content-breadcrumb .icon{
-    font-size: 1.55rem;
-    color: #fff;
-}
-.breadcrumb-app .content-breadcrumb .breadcrumb{
-    // justify-content: end;
+.breadcrumb-app .card.card-body .breadcrumb{
     margin: 0;
+    font-size: 0.8rem;
 }
-.breadcrumb-app .content-breadcrumb .breadcrumb li,
-.breadcrumb-app .content-breadcrumb .breadcrumb li a{
-    color: #fff;
+.breadcrumb-app .breadcrumb li,
+.breadcrumb-app .breadcrumb li a,
+.breadcrumb-app .breadcrumb-item+.breadcrumb-item::before{
+    color: #888;
+    font-size: 1rem;
+    letter-spacing: -.025rem;
+    text-decoration: none;
 }
-.breadcrumb-item+.breadcrumb-item::before {
-    color: #fff;
-}
-.breadcrumb-item+.breadcrumb-item.active {
+.breadcrumb-app .breadcrumb-item+.breadcrumb-item.active {
+    color: var(--color-roxo)!important;
     font-weight: bold;
 }
 

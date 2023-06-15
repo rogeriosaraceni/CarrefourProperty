@@ -56,13 +56,9 @@ document.querySelector('[data-js="currentYear"]').textContent = currentYear;
 ---------------------------------------------------------------------- */
 (() => {
     "use strict";
-    document
-        .querySelector("#navbarSideCollapse")
-        ?.addEventListener("click", () => {
-            document
-                .querySelector(".offcanvas-collapse")
-                .classList.toggle("open");
-        });
+        document.querySelector("#navbarSideCollapse")?.addEventListener("click", () => {
+        document.querySelector(".offcanvas-collapse").classList.toggle("open");
+    });
 })();
 
 /*! --------------------------------------------------------------------
@@ -70,10 +66,12 @@ document.querySelector('[data-js="currentYear"]').textContent = currentYear;
  * --------------------------------------------------------------------*/
 document.addEventListener("DOMContentLoaded", function () {
     const currentUrl = window.location.pathname;
-    const navLinks = document.querySelectorAll(
-        `.navbar-nav .nav-item a[href$="${currentUrl}"]`
-    );
+    const navLinks = document.querySelectorAll(`.navbar-nav .nav-item a[href$="${currentUrl}"]`);
+
     navLinks.forEach(function (link) {
         link.classList.add("active");
+
+        const dropdownParent = link.closest(".nav-item.dropdown");
+        dropdownParent?.classList.add("active");
     });
 });
