@@ -1,11 +1,8 @@
 /* ////////////////////////////////////////////////////////////////////
 *
-*  CSS CORE form
-*  v2.1 - 23 Jun 2022
-*  Dev by: RogÃ©rio Saraceni
+*  form
 *
-* - variables form
-* - form-control
+* - input
 * - form-check-label
 * - form-group
 * - input-group-text
@@ -17,38 +14,10 @@
 *
 * //////////////////////////////////////////////////////////////////// */
 
-/* --------------------------------------------------------------------
-* - variables form
-* -------------------------------------------------------------------- */
-:root {
-    --form-font-size-label: 0.9rem;
-    --form-font-size-control-form: 0.8rem;
-    --form-height: calc(1.3em + .85rem + 2px);
-    --form-color-check-radio: #4095f1;
-    --form-color-border-focus: #a8cff8;
-    --form-outline-offset-focus: +2px;
-    --form-background: #fff;
-}
 
 /* --------------------------------------------------------------------
-* - form-control
+* - input
 * -------------------------------------------------------------------- */
-.form-control {
-    height: var(--form-height);
-    font-size: var(--font-size-default);
-    color: var(--font-color-default);
-    border-color: var(--border-color-default);
-    border-radius: var(--border-radius-default);
-    background-color: var(--form-background);
-}
-
-.form-control:focus {
-    border-color: var(--border-color-default);
-    outline-color: var(--form-color-border-focus) !important;
-    outline-offset: var(--form-outline-offset-focus) !important;
-    box-shadow: 0 0 0 0.2rem rgb(216 217 219 / 50%);
-}
-
 input[type="file"].form-control {
     padding-top: 2px;
     padding-left: 4px;
@@ -105,7 +74,6 @@ label {
     display: block;
     clear: both;
     content: "\00a0";
-    font-size: var(--font-size-default);
 }
 
 @media(max-width: 1200px) {
@@ -149,12 +117,10 @@ label {
 * - custom-file
 * -------------------------------------------------------------------- */
 .custom-file {
-    height: var(--form-height);
     margin-bottom: 0;
 }
 
 .custom-file-input {
-    height: var(--form-height);
     margin: 0;
 }
 
