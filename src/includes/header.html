@@ -1,149 +1,43 @@
-<header class="header-app">
-    <nav class="navbar navbar-expand-xl fixed-top navbar-dark bg-app-roxo py-1">
-        <section class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 5fr 1fr">
-            <div class="d-flex">
-                <a class="navbar-brand" href="../principal/index.html">
-                    <img class="img-fluid slide-in-left" src="../../assets/images/logo-white.svg" alt="logo" />
-                </a>
+<div class="d-flex align-items-center justify-content-between gap-3">
+    <a class="navbar-brand" href="../principal/index.html">
+        <img class="img-fluid slide-in-left" src="../../assets/images/logo-white.svg" alt="logo" />
+    </a>
 
-                <div class="navbar-collapse offcanvas-collapse navbar-dark bg-app-roxo h-100" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <div class="d-flex justify-content-end gap-3">
+        <div class="flex-shrink-0 dropdown">
+            <a href="#"
+                class="d-flex align-items-center link-light text-decoration-none dropdown-toggle gap-2 slide-in-right"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://cdn-icons-png.flaticon.com/128/2099/2099220.png" alt="mdo" width="32" height="32"
+                    class="rounded-circle" />
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="../principal/index.html">Principal</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="../ficha-tecnica/index.html">Ficha Técnica</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="../dos/index.html">DOS</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="../manutencao/index.html">Manutenção</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="../operacoes-galerias/index.html">Operações Galerias</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="../comercial/index.html">Comercial</a>
-                        </li>
-
-                        <!-- Inicio Projetos Galerias -->
-                        <li class="nav-item dropdown">
-                            <a
-                                class="nav-link dropdown-toggle"
-                                href="#" role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                                data-bs-auto-close="false"
-                            >
-                                Projetos Galerias
-                            </a>
-
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="../projetos-galerias/planta-galeria.html">Planta Galeria</a>
-                                </li>
-
-                                <li>
-                                    <a class="dropdown-item" href="../projetos-galerias/evento-temporario.html">Evento Temporário</a>
-                                </li>
-
-                                <li>
-                                    <a class="dropdown-item" href="../projetos-galerias/lojas.html">Lojas</a>
-                                </li>
-
-                                <li>
-                                    <a class="dropdown-item" href="../projetos-galerias/quiosque.html">Quiosque</a>
-                                </li>
-
-                                <!-- Inicio Obras -->
-                                <li class="nav-item dropend">
-                                    <a
-                                        class="nav-link dropdown-toggle"
-                                        href="#" role="button"
-                                        data-bs-toggle="dropdown"
-                                        aria-expanded="false"
-                                        data-bs-auto-close="false"
-                                    >
-                                        Obras
-                                    </a>
-
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a class="dropdown-item" href="../projetos-galerias/obras-pasta-tecnica.html">Pasta Técnica</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="../projetos-galerias/obras-docs-up-load.html">Docs Up Load</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="../projetos-galerias/obras-time-line.html">Time Line</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <!-- Fim Obras -->
-
-                                <li>
-                                    <a class="dropdown-item" href="../projetos-galerias/cadastro-luc.html">Cadastro LUC</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <!-- Fim Projetos Galerias -->
-                    </ul>
+                <div class="d-flex flex-column">
+                    <span class="lh-1">Administrador</span>
+                    <small class="lh-1">maycon@dlfelix.com</small>
                 </div>
-            </div>
+            </a>
 
-            <div class="d-flex justify-content-end gap-3">
-                <div class="flex-shrink-0 dropdown">
-                    <a
-                        href="#" class="d-flex align-items-center link-light text-decoration-none dropdown-toggle gap-2 slide-in-right"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                    >
-                        <img src="https://cdn-icons-png.flaticon.com/128/2099/2099220.png" alt="mdo" width="32" height="32"
-                            class="rounded-circle" />
-
-                        <div class="d-flex flex-column">
-                            <span class="lh-1">Administrador</span>
-                            <small class="lh-1">maycon@dlfelix.com</small>
-                        </div>
+            <ul class="dropdown-menu text-small shadow">
+                <li>
+                    <a class="dropdown-item" href="#">
+                        <i class="bi bi-person-circle"></i>
+                        <small class="line-height-1">Perfil</small>
                     </a>
+                </li>
 
-                    <ul class="dropdown-menu text-small shadow">
-                        <li>
-                            <a class="dropdown-item" href="#">
-                                <i class="bi bi-person-circle"></i>
-                                <small class="line-height-1">Perfil</small>
-                            </a>
-                        </li>
+                <li>
+                    <a class="dropdown-item" href="../login/index.html">
+                        <i class="bi bi-power"></i>
+                        <small class="line-height-1">Sair</small>
+                    </a>
+                </li>
+            </ul>
+        </div>
 
-                        <li>
-                            <a class="dropdown-item" href="../login/index.html">
-                                <i class="bi bi-power"></i>
-                                <small class="line-height-1">Sair</small>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <button
-                    id="navbarSideCollapse"
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-        </section>
-    </nav>
-</header>
+        <button id="navbarSideCollapse" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>

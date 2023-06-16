@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <include src="./includes/head.html"></include>
     </head>
 
     <body>
-        <include src="./includes/header.html"></include>
+        <header class="header-app">
+            <nav class="navbar navbar-expand-xl fixed-top navbar-dark bg-app-roxo py-1">
+                <section class="container-fluid">
+                    <div class="d-flex flex-column w-100">
+                        <include src="./includes/header.html"></include>
+
+                        <include src="./pages/dos/nav.html"></include>
+                    </div>
+                </section>
+            </nav>
+        </header>
 
         <main class="main-app">
             <section class="container-fluid">
