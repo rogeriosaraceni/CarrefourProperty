@@ -4,109 +4,6 @@
         <include src="./includes/head.html"></include>
     </head>
 
-    <style>
-        .wrapper-timeline{
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            margin: 0 auto 0 auto;
-            width: 100%;
-        }
-        .timeline {
-            position: relative;
-            display: flex;
-            overflow: auto;
-            margin: 0 1.5rem;
-        }
-
-        .line-timeline{
-            z-index: 0;
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-            width: 100%;
-            height: 2px;
-            background-color: var(--color-laranja);
-        }
-        .line-timeline:before,
-        .line-timeline:after{
-            content: "";
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 1rem;
-            height: 1rem;
-            border-radius: 50%;
-            background-color: var(--color-laranja);
-        }
-        .line-timeline:after{
-            right: 0;
-        }
-
-        .stage {
-            z-index: 1;
-            position: relative;
-            overflow: hidden;
-            border: 0;
-            flex: 0 0 230px;
-            margin: 0 1rem;
-            list-style: none;
-        }
-        .stage:first-child {
-            margin-left: 0;
-        }
-        .stage .card{
-            text-decoration: none;
-        }
-
-
-
-
-.stage .number {
-    z-index: 1;
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    width: 60px;
-    height: 60px;
-}
-.stage .number::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: '';
-    height: 0;
-    border-top: 60px solid var(--color-roxo);
-    border-right: 60px solid transparent;
-    border-radius: 1.3rem;
-}
-.stage .number i.num{
-    z-index: 1;
-    position: absolute;
-    top: 10px;
-    left: 12px;
-    color: #fff;
-    font-size: 0.9rem;
-    font-style: normal;
-}
-
-
-
-
-
-
-
-
-
-
-        .stage .status.status-verde   { color: #1abc9c;}
-        .stage .status.status-laranja { color: #f7b84b;}
-        .stage .status.status-vermelho{ color: #f65f6e;}
-        .stage .status.status-cinza   { color: #ddd;}
-
-    </style>
-
     <body>
         <include src="./includes/header.html"></include>
 
@@ -127,53 +24,17 @@
             </section>
 
             <section class="container-fluid">
-                <div class="wrapper-timeline">
-                    <ul class="timeline">
 
-                        <li class="stage">
-                            <span class="number">
-                                <i class="num">1</i>
-                            </span>
-                            <a class="card" href="">
-                                <article class="card-body text-center z-3">
-                                    <div class="d-flex align-items-center justify-content-center flex-column">
-                                        <span class="status status-verde fs-2 mb-1">
-                                            <i class="bi bi-check-circle-fill"></i>
-                                        </span>
 
-                                        <div class="d-flex align-items-center justify-content-center mb-2">
-                                            <span>100</span>
-                                            <i class="bi bi-percent"></i>
-                                        </div>
-                                    </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="section-title">
+                            <span class="title">Time Line</span>
+                        </div>
 
-                                    <h4 class="fw-bold">Vistoria Inicial</h4>
-
-                                    <hr class="my-1">
-
-                                    <div class="stage-text">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, quam in efficitur commodo,
-                                            turpis lorem dictum nisl, nec fermentum nunc purus sit amet tortor.
-                                        </p>
-                                    </div>
-                                </article>
-                            </a>
-                        </li>
-
-                    </ul>
-
-                    <div class="line-timeline"></div>
-
-                    <div class="card">
-                        <div class="card-body py-2">
-                            <div class="d-flex align-items-center gap-1">
-                                <i class="bi bi-arrow-repeat"></i>
-                                <strong>Atualização:</strong>
-                                <small>16/06/2023</small>
-                                <small>|</small>
-                                <small>10:44</small>
-                            </div>
+                        <div class="wrapper-timeline">
+                            <ul class="timeline" data-template="timeline"></ul>
+                            <div class="line-timeline"></div>
                         </div>
                     </div>
                 </div>
@@ -181,6 +42,205 @@
         </main>
 
         <include src="./includes/footer.html"></include>
+
+        <script>
+            const timelines = [
+                {
+                    status: "status-concluido",
+                    number: "1",
+                    link: "#",
+                    iconStatus: "bi bi-check-circle-fill",
+                    iconStatusTooltip: "Concluído",
+                    value: "100",
+                    name: "Vistoria Inicial",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, quam in efficitur commodo",
+                    data: "16/06/2023",
+                    hora: "10:44",
+                },
+
+                {
+                    status: "status-concluido",
+                    number: "2",
+                    link: "#",
+                    iconStatus: "bi bi-check-circle-fill",
+                    iconStatusTooltip: "Concluído",
+                    value: "100",
+                    name: "Assintura Contrato",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, quam in efficitur commodo",
+                    data: "16/06/2023",
+                    hora: "10:44",
+                },
+
+                {
+                    status: "status-progredindo",
+                    number: "3",
+                    link: "#",
+                    iconStatus: "bi bi-check-circle-fill",
+                    iconStatusTooltip: "Em progresso",
+                    value: "50",
+                    name: "Boas Vindas",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, quam in efficitur commodo",
+                    data: "16/06/2023",
+                    hora: "10:44",
+                },
+
+                {
+                    status: "status-parado",
+                    number: "4",
+                    link: "#",
+                    iconStatus: "bi bi-stop-circle",
+                    iconStatusTooltip: "Parado",
+                    value: "0",
+                    name: "Aprovação Projetos",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, quam in efficitur commodo",
+                    data: "16/06/2023",
+                    hora: "10:44",
+                },
+
+                {
+                    status: "status-rejeitado",
+                    number: "5",
+                    link: "#",
+                    iconStatus: "bi bi-x-circle",
+                    iconStatusTooltip: "Rejeitado",
+                    value: "0",
+                    name: "Liberação Obras",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, quam in efficitur commodo",
+                    data: "16/06/2023",
+                    hora: "10:44",
+                },
+
+                {
+                    status: "status-concluido",
+                    number: "6",
+                    link: "#",
+                    iconStatus: "bi bi-check-circle-fill",
+                    iconStatusTooltip: "Concluído",
+                    value: "100",
+                    name: "Prevenção",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, quam in efficitur commodo",
+                    data: "16/06/2023",
+                    hora: "10:44",
+                },
+
+                {
+                    status: "status-concluido",
+                    number: "7",
+                    link: "#",
+                    iconStatus: "bi bi-check-circle-fill",
+                    iconStatusTooltip: "Concluído",
+                    value: "100",
+                    name: "Sesmit",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, quam in efficitur commodo",
+                    data: "16/06/2023",
+                    hora: "10:44",
+                },
+
+                {
+                    status: "status-concluido",
+                    number: "8",
+                    link: "#",
+                    iconStatus: "bi bi-check-circle-fill",
+                    iconStatusTooltip: "Concluído",
+                    value: "100",
+                    name: "Execução",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, quam in efficitur commodo",
+                    data: "16/06/2023",
+                    hora: "10:44",
+                },
+
+                {
+                    status: "status-concluido",
+                    number: "9",
+                    link: "#",
+                    iconStatus: "bi bi-check-circle-fill",
+                    iconStatusTooltip: "Concluído",
+                    value: "100",
+                    name: "Vistoria Intermediária",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, quam in efficitur commodo",
+                    data: "16/06/2023",
+                    hora: "10:44",
+                },
+
+                {
+                    status: "status-concluido",
+                    number: "10",
+                    link: "#",
+                    iconStatus: "bi bi-check-circle-fill",
+                    iconStatusTooltip: "Concluído",
+                    value: "100",
+                    name: "Vistoria Fina",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, quam in efficitur commodo",
+                    data: "16/06/2023",
+                    hora: "10:44",
+                },
+
+                {
+                    status: "status-concluido",
+                    number: "11",
+                    link: "#",
+                    iconStatus: "bi bi-check-circle-fill",
+                    iconStatusTooltip: "Concluído",
+                    value: "100",
+                    name: "Inauguração",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, quam in efficitur commodo",
+                    data: "16/06/2023",
+                    hora: "10:44",
+                },
+            ];
+
+            const timelineContainer = document.querySelector('[data-template="timeline"]')
+            console.log(timelineContainer);
+
+            function generateTemplateTimeline(timelines) {
+                let html = ""
+
+                timelines.forEach(timeline => {
+                    html += `
+
+                    <li class="stage ${timeline.status}">
+                        <span class="number z-3">
+                            <i class="num">${timeline.number}</i>
+                        </span>
+
+                        <a class="card overflow-hidden text-decoration-none" data-bs-toggle="tooltip" data-bs-title="${timeline.iconStatusTooltip}" href="${timeline.link}">
+                            <article class="card-body text-center p-2 z-2">
+                                <div class="d-flex align-items-center justify-content-center flex-column">
+                                    <span class="fs-2 mb-1 status">
+                                        <i class="${timeline.iconStatus}"></i>
+                                    </span>
+
+                                    <div class="d-flex align-items-center justify-content-center mb-2">
+                                        <span>${timeline.value}</span>
+                                        <i class="bi bi-percent"></i>
+                                    </div>
+                                </div>
+
+                                <h5 class="fw-bold">${timeline.name}</h5>
+
+                                <div class="stage-text">
+                                    ${timeline.text}
+                                </div>
+
+                                <hr class="my-1">
+
+                                <div class="d-flex align-items-center justify-content-center gap-1" style="font-size: 0.8rem;">
+                                    <i class="bi bi-arrow-repeat"></i>
+                                    <span>Atualização:</span>
+                                    <span>${timeline.data}</span>
+                                    <span>${timeline.hora}</span>
+                                </div>
+                            </article>
+                        </a>
+                    </li>
+                    `
+                })
+
+                return html;
+            }
+
+            timelineContainer.innerHTML = generateTemplateTimeline(timelines)
+        </script>
     </body>
 </html>
 

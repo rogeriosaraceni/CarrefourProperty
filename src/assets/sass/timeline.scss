@@ -1,0 +1,133 @@
+.wrapper-timeline{
+    --status-concluido:  #1abc9c;
+    --status-progredindo:#f7b84b;
+    --status-rejeitado:  #f65f6e;
+    --status-parado:     #dddddd;
+}
+
+.wrapper-timeline{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 0 auto;
+    padding: 1rem 0;
+    width: 100%;
+}
+.timeline {
+    position: relative;
+    display: flex;
+    overflow: auto;
+    margin: 0 1.5rem;
+}
+
+/* line-timeline */
+.line-timeline{
+    z-index: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-laranja);
+}
+.line-timeline:before,
+.line-timeline:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--color-laranja);
+}
+.line-timeline:after{ right: 0;}
+
+/* stage */
+.stage {
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    border: 0;
+    flex: 0 0 230px;
+    margin: 0 1rem;
+    list-style: none;
+}
+.stage:first-child { margin-left: 0;}
+
+.stage .card {
+    transition: all 0.3s;
+}
+.stage:hover .card {
+    border-color: #ddd !important;
+    box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 4px 5px 4px 3px #0000001f !important;
+}
+
+
+/* stage number */
+.stage .number {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 60px;
+    height: 60px;
+}
+.stage .number::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    height: 0;
+    border-top: 60px solid #777;
+    border-right: 60px solid transparent;
+    border-radius: 1.3rem;
+}
+.stage .number i.num{
+    z-index: 1;
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    color: #fff;
+    font-size: 0.9rem;
+    font-style: normal;
+}
+
+.stage .card-body::before{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    transition: all 0.3s;
+}
+.stage:hover .card-body::before {
+    opacity: 0.3;
+}
+
+/* stage status color */
+.stage.status-concluido .card-body::before{ background-color: var(--status-concluido);}
+.stage.status-concluido .number::after{ border-top-color: var(--status-concluido);}
+.stage.status-concluido .status{ color: var(--status-concluido);}
+
+.stage.status-progredindo .card-body::before{ background-color: var(--status-progredindo);}
+.stage.status-progredindo .number::after{ border-top-color: var(--status-progredindo);}
+.stage.status-progredindo .status{ color: var(--status-progredindo);}
+
+.stage.status-rejeitado .card-body::before{ background-color: var(--status-rejeitado);}
+.stage.status-rejeitado .number::after{ border-top-color: var(--status-rejeitado);}
+.stage.status-rejeitado .status{ color: var(--status-rejeitado);}
+
+.stage.status-parado .card-body::before{ background-color: var(--status-parado);}
+.stage.status-parado .number::after{ border-top-color: var(--status-parado);}
+.stage.status-parado .status{ color: var(--status-parado);}
+
+.stage .stage-text{
+    height: 150px;
+    text-align: left;
+    line-height: 1.3;
+    overflow-y: auto;
+}
