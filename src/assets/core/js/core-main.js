@@ -53,20 +53,19 @@ btnShowAllPassword.forEach((item) => {
  * currentYear
  * --------------------------------------------------------------------*/
 const currentYear = new Date().getFullYear();
-document.querySelector('[data-js="currentYear"]').textContent = currentYear;
+const divCurrentYear = document.querySelector('[data-js="currentYear"]')
+if (divCurrentYear) {
+    divCurrentYear.textContent = currentYear;
+}
 
 /* --------------------------------------------------------------------
 * - navbarSideCollapse
 ---------------------------------------------------------------------- */
 (() => {
     "use strict";
-    document
-        .querySelector("#navbarSideCollapse")
-        ?.addEventListener("click", () => {
-            document
-                .querySelector(".offcanvas-collapse")
-                .classList.toggle("open");
-        });
+    document.querySelector("#navbarSideCollapse")?.addEventListener("click", () => {
+        document.querySelector(".offcanvas-collapse").classList.toggle("open");
+    });
 })();
 
 /*! --------------------------------------------------------------------

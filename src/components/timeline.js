@@ -2,7 +2,8 @@ const timelines = [
     {
         status: "status-concluido",
         number: "1",
-        link: "#",
+        link: "popup.html",
+        popup: 'data-fancybox data-type="iframe"',
         iconStatus: "bi bi-check-circle-fill",
         iconStatusTooltip: "Concluído",
         value: "100",
@@ -156,7 +157,7 @@ function generateTemplateTimeline(timelines) {
                     <i class="num">${timeline.number}</i>
                 </span>
 
-                <a class="card overflow-hidden text-decoration-none" data-bs-toggle="tooltip" data-bs-title="${timeline.iconStatusTooltip}" href="${timeline.link}">
+                <a class="card overflow-hidden text-decoration-none" data-bs-toggle="tooltip" data-bs-title="${timeline.iconStatusTooltip}" ${timeline.popup} href="${timeline.link}">
                     <article class="card-body text-center p-2 z-2">
                         <div class="d-flex align-items-center justify-content-center flex-column">
                             <span class="fs-2 mb-1 status">
