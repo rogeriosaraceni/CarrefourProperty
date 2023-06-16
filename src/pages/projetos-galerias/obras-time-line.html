@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <include src="./includes/head.html"></include>
+    </head>
+
+    <style>
+        .wrapper-timeline{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto 0 auto;
+            width: 100%;
+        }
+        .timeline {
+            position: relative;
+            display: flex;
+            overflow: auto;
+            margin: 0 1.5rem;
+        }
+
+        .line-timeline{
+            z-index: 0;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-laranja);
+        }
+        .line-timeline:before,
+        .line-timeline:after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background-color: var(--color-laranja);
+        }
+        .line-timeline:after{
+            right: 0;
+        }
+
+        .stage {
+            z-index: 1;
+            position: relative;
+            overflow: hidden;
+            border: 0;
+            flex: 0 0 230px;
+            margin: 0 1rem;
+            list-style: none;
+        }
+        .stage:first-child {
+            margin-left: 0;
+        }
+        .stage .card{
+            text-decoration: none;
+        }
+
+
+
+
+.stage .number {
+    z-index: 1;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 60px;
+    height: 60px;
+}
+.stage .number::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    height: 0;
+    border-top: 60px solid var(--color-roxo);
+    border-right: 60px solid transparent;
+    border-radius: 1.3rem;
+}
+.stage .number i.num{
+    z-index: 1;
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    color: #fff;
+    font-size: 0.9rem;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+        .stage .status.status-verde   { color: #1abc9c;}
+        .stage .status.status-laranja { color: #f7b84b;}
+        .stage .status.status-vermelho{ color: #f65f6e;}
+        .stage .status.status-cinza   { color: #ddd;}
+
+    </style>
+
+    <body>
+        <include src="./includes/header.html"></include>
+
+        <main class="main-app">
+            <section class="container-fluid">
+                <nav aria-label="breadcrumb" class="breadcrumb-app">
+                    <div class="card card-body">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="../principal/index.html"><i class="bi bi-house-fill"></i></a>
+                            </li>
+                            <li class="breadcrumb-item">Projetos Galerias</li>
+                            <li class="breadcrumb-item">Obras</li>
+                            <li class="breadcrumb-item active" aria-current="page">Time Line</li>
+                        </ol>
+                    </div>
+                </nav>
+            </section>
+
+            <section class="container-fluid">
+                <div class="wrapper-timeline">
+                    <ul class="timeline">
+
+                        <li class="stage">
+                            <span class="number">
+                                <i class="num">1</i>
+                            </span>
+                            <a class="card" href="">
+                                <article class="card-body text-center z-3">
+                                    <div class="d-flex align-items-center justify-content-center flex-column">
+                                        <span class="status status-verde fs-2 mb-1">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                        </span>
+
+                                        <div class="d-flex align-items-center justify-content-center mb-2">
+                                            <span>100</span>
+                                            <i class="bi bi-percent"></i>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="fw-bold">Vistoria Inicial</h4>
+
+                                    <hr class="my-1">
+
+                                    <div class="stage-text">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, quam in efficitur commodo,
+                                            turpis lorem dictum nisl, nec fermentum nunc purus sit amet tortor.
+                                        </p>
+                                    </div>
+                                </article>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <div class="line-timeline"></div>
+
+                    <div class="card">
+                        <div class="card-body py-2">
+                            <div class="d-flex align-items-center gap-1">
+                                <i class="bi bi-arrow-repeat"></i>
+                                <strong>Atualização:</strong>
+                                <small>16/06/2023</small>
+                                <small>|</small>
+                                <small>10:44</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <include src="./includes/footer.html"></include>
+    </body>
+</html>
+
+
+
+
+
