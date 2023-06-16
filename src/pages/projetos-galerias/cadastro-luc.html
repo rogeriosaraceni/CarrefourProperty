@@ -23,13 +23,126 @@
             </section>
 
             <section class="container-fluid">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="section-title">
+                            <span class="title">Cadastro</span>
+                        </div>
 
+                        <form method="" action="">
+                            <section class="row">
+                                <label class="col-xl-2 col-lg-3 col-md-6 col-sm-6">Tipo:
+                                    <select class="form-select" name="tipo" required>
+                                        <option value=""></option>
+                                        <option value="1">Satelites</option>
+                                        <option value="2">Âncoras</option>
+                                        <option value="3">Stan Alone</option>
+                                    </select>
+                                </label>
+
+                                <label class="col-xl-2 col-lg-3 col-md-6 col-sm-6">LUC:
+                                    <input class="form-control" type="text" name="luc">
+                                </label>
+
+                                <label class="col-xl-1 col-lg-3 col-md-6 col-sm-6">Área:
+                                    <input class="form-control text-end" type="text" name="area" onkeydown="FormataValor(this,event,17,2);">
+                                </label>
+
+                                <label class="col-xl-2 col-lg-3 col-md-6 col-sm-6">Tipo:
+                                    <select class="form-select" name="" required>
+                                        <option value=""></option>
+                                        <option value="1">1</option>
+                                    </select>
+                                </label>
+
+                                <label class="col-xl-2 col-lg-5 col-md-6 col-sm-6">Contrato:
+                                    <input class="form-control" type="text" name="contrato">
+                                </label>
+
+                                <label class="col-xl-2 col-lg-5 col-md-6 col-sm-6">Nome Fantasia:
+                                    <input class="form-control" type="text" name="nome_fantasia">
+                                </label>
+
+                                <div class="col-xl-1 col-lg-2 col-md-12 col-sm-12">
+                                    <div class="label-clearfix last-lg"></div>
+                                    <button type="submit" class="btn btn-primary float-end">Ok</button>
+                                </div>
+                            </section>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="section-title">
+                            <span class="title">Listagem</span>
+                        </div>
+
+                        <table class="table table-fixed table-hover tab-datatable-scroll-x" width="100%">
+                            <thead>
+                                <tr>
+                                    <th style="width: 150px;">Tipo</th>
+                                    <th style="width: 150px;">LUC</th>
+                                    <th style="width: 150px;">Área</th>
+                                    <th style="width: 150px;">Tipo</th>
+                                    <th style="width: 150px;">Status</th>
+                                    <th style="width: 200px;">Contrato</th>
+                                    <th style="width: 200px;">Nome Fantasia</th>
+
+                                    <th style="width: 070px;" class="no-sort text-center">Edit</th>
+                                    <th style="width: 070px;" class="no-sort text-center">Del</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>Satelites</td>
+                                    <td>LUC 1</td>
+                                    <td>1212</td>
+                                    <td>Tipo 1</td>
+                                    <td>Status 1</td>
+                                    <td>Contrato 1</td>
+                                    <td>Nome Fantasia 1</td>
+
+                                    <td class="text-center">
+                                        <a class="text-secondary" data-bs-toggle="tooltip" data-bs-title="Edit" href="#">
+                                            <i class="bi bi-pencil-square fs-5 icon-tab"></i>
+                                        </a>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="text-secondary" data-bs-toggle="tooltip" data-bs-title="Del" data-row="delete" href="#">
+                                            <i class="bi bi-trash fs-5 icon-tab"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Satelites</td>
+                                    <td>LUC 1</td>
+                                    <td>1212</td>
+                                    <td>Tipo 1</td>
+                                    <td>Status 1</td>
+                                    <td>Contrato 1</td>
+                                    <td>Nome Fantasia 1</td>
+
+                                    <td class="text-center">
+                                        <a class="text-secondary" data-bs-toggle="tooltip" data-bs-title="Edit" href="#">
+                                            <i class="bi bi-pencil-square fs-5 icon-tab"></i>
+                                        </a>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="text-secondary" data-bs-toggle="tooltip" data-bs-title="Del" data-row="delete" href="#">
+                                            <i class="bi bi-trash fs-5 icon-tab"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </section>
         </main>
 
         <include src="./includes/footer.html"></include>
     </body>
 </html>
-
-
-
