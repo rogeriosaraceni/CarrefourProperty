@@ -50,7 +50,7 @@
     position: relative;
     overflow: hidden;
     border: 0;
-    flex: 0 0 230px;
+    flex: 0 0 220px;
     margin: 0 1rem;
     list-style: none;
 }
@@ -105,7 +105,7 @@
     transition: all 0.3s;
 }
 .stage:hover .card-body::before {
-    opacity: 0.3;
+    opacity: 0.25;
 }
 
 /* stage status color */
