@@ -16,6 +16,7 @@
 .timeline {
     position: relative;
     display: flex;
+    justify-content: center;
     overflow: auto;
     margin: 0 1rem;
     padding: 0 1rem;
@@ -51,7 +52,7 @@
     position: relative;
     overflow: hidden;
     border: 0;
-    flex: 0 0 180px;
+    flex: 0 0 145px;
     margin: 0 0.5rem;
     list-style: none;
 }
@@ -134,7 +135,7 @@
 
 .stage .stage-text{
     height: 150px;
-    text-align: left;
+    text-align: center;
     line-height: 1.3;
     overflow-y: auto;
 }
