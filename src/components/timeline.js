@@ -20,7 +20,7 @@ const timelines = [
         iconStatus: "bi bi-check-circle-fill",
         iconStatusTooltip: "Concluído",
         value: "100",
-        name: "Assintura Contrato",
+        name: "Assinatura Contrato",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, quam in efficitur commodo",
         data: "16/06/2023",
         hora: "10:44",
