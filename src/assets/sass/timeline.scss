@@ -1,8 +1,8 @@
 .wrapper-timeline{
     --status-concluido:  #1abc9c;
-    --status-progredindo:#f7b84b;
-    --status-rejeitado:  #f65f6e;
-    --status-parado:     #dddddd;
+    --status-progresso:#f7b84b;
+    --status-reprovado:  #f65f6e;
+    --status-aguardando:     #dddddd;
 }
 
 .wrapper-timeline{
@@ -114,17 +114,17 @@
 .stage.status-concluido .number::after{ border-top-color: var(--status-concluido);}
 .stage.status-concluido .status{ color: var(--status-concluido);}
 
-.stage.status-progredindo .card-body::before{ background-color: var(--status-progredindo);}
-.stage.status-progredindo .number::after{ border-top-color: var(--status-progredindo);}
-.stage.status-progredindo .status{ color: var(--status-progredindo);}
+.stage.status-progresso .card-body::before{ background-color: var(--status-progresso);}
+.stage.status-progresso .number::after{ border-top-color: var(--status-progresso);}
+.stage.status-progresso .status{ color: var(--status-progresso);}
 
-.stage.status-rejeitado .card-body::before{ background-color: var(--status-rejeitado);}
-.stage.status-rejeitado .number::after{ border-top-color: var(--status-rejeitado);}
-.stage.status-rejeitado .status{ color: var(--status-rejeitado);}
+.stage.status-reprovado .card-body::before{ background-color: var(--status-reprovado);}
+.stage.status-reprovado .number::after{ border-top-color: var(--status-reprovado);}
+.stage.status-reprovado .status{ color: var(--status-reprovado);}
 
-.stage.status-parado .card-body::before{ background-color: var(--status-parado);}
-.stage.status-parado .number::after{ border-top-color: var(--status-parado);}
-.stage.status-parado .status{ color: var(--status-parado);}
+.stage.status-aguardando .card-body::before{ background-color: var(--status-aguardando);}
+.stage.status-aguardando .number::after{ border-top-color: var(--status-aguardando);}
+.stage.status-aguardando .status{ color: var(--status-aguardando);}
 
 .stage .stage-title {
     height: 50px;
@@ -134,7 +134,7 @@
 }
 
 .stage .stage-text{
-    height: 150px;
+    height: 100px;
     text-align: center;
     line-height: 1.3;
     overflow-y: auto;
