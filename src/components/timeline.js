@@ -170,7 +170,7 @@ function generateTemplateTimeline(timelines) {
                             </div>
                         </div>
 
-                        <h5 class="fw-bold">${timeline.name}</h5>
+                        <h5 class="stage-title">${timeline.name}</h5>
 
                         <div class="stage-text">
                             ${timeline.text}
@@ -178,9 +178,8 @@ function generateTemplateTimeline(timelines) {
 
                         <hr class="my-1">
 
-                        <div class="d-flex align-items-center justify-content-center gap-1" style="font-size: 0.8rem;">
+                        <div class="d-flex align-items-center justify-content-center gap-1" style="font-size: 0.8rem;" data-bs-toggle="tooltip" data-bs-title="Atualização">
                             <i class="bi bi-arrow-repeat"></i>
-                            <span>Atualização:</span>
                             <span>${timeline.data}</span>
                             <span>${timeline.hora}</span>
                         </div>

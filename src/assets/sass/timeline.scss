@@ -17,7 +17,8 @@
     position: relative;
     display: flex;
     overflow: auto;
-    margin: 0 1.5rem;
+    margin: 0 1rem;
+    padding: 0 1rem;
 }
 
 /* line-timeline */
@@ -50,11 +51,10 @@
     position: relative;
     overflow: hidden;
     border: 0;
-    flex: 0 0 220px;
-    margin: 0 1rem;
+    flex: 0 0 180px;
+    margin: 0 0.5rem;
     list-style: none;
 }
-.stage:first-child { margin-left: 0;}
 
 .stage .card {
     transition: all 0.3s;
@@ -124,6 +124,13 @@
 .stage.status-parado .card-body::before{ background-color: var(--status-parado);}
 .stage.status-parado .number::after{ border-top-color: var(--status-parado);}
 .stage.status-parado .status{ color: var(--status-parado);}
+
+.stage .stage-title {
+    height: 50px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    overflow: hidden;
+}
 
 .stage .stage-text{
     height: 150px;
