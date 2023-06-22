@@ -14,41 +14,6 @@
 }
 
 /* --------------------------------------------------------------------
-* - variables
----------------------------------------------------------------------- */
-:root{
-    --color-azul:        #2e4491;
-    --color-azul-claro:  #7ca1be;
-    --color-azul-escuro: #2b3558;
-    --color-cinza:       #efefef;
-    --color-vermelho:    #c20016;
-    --color-verde:       #44802f;
-    --color-laranja:     #f15e33;
-    --color-roxo:        #8d2562;
-    --color-vinho:       #860010;
-}
-
-.text-app-azul       { color: var(--color-azul);}
-.text-app-azul-claro { color: var(--color-azul-claro);}
-.text-app-azul-escuro{ color: var(--color-azul-escuro);}
-.text-app-cinza      { color: var(--color-cinza);}
-.text-app-vermelho   { color: var(--color-vermelho);}
-.text-app-verde      { color: var(--color-verde);}
-.text-app-laranja    { color: var(--color-laranja);}
-.text-app-roxo       { color: var(--color-roxo);}
-.text-app-vinho      { color: var(--color-vinho);}
-
-.bg-app-azul       { background-color: var(--color-azul);}
-.bg-app-azul-claro { background-color: var(--color-azul-claro);}
-.bg-app-azul-escuro{ background-color: var(--color-azul-escuro);}
-.bg-app-cinza      { background-color: var(--color-cinza);}
-.bg-app-vermelho   { background-color: var(--color-vermelho);}
-.bg-app-verde      { background-color: var(--color-verde);}
-.bg-app-laranja    { background-color: var(--color-laranja);}
-.bg-app-roxo       { background-color: var(--color-roxo);}
-.bg-app-vinho      { background-color: var(--color-vinho);}
-
-/* --------------------------------------------------------------------
 * - body
 ---------------------------------------------------------------------- */
 html{
