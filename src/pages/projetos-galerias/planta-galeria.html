@@ -35,8 +35,16 @@
             <section class="container-fluid">
                 <div class="card">
                     <div class="card-body">
-                        <div class="section-title">
+                        <div class="section-title align-items-center justify-content-between gap-2 ">
                             <span class="title">Seleção</span>
+                            <a
+                                class="btn btn-sm btn-success mb-1"
+                                data-fancybox
+                                data-type="iframe"
+                                data-width="1200"
+                                data-height="600"
+                                href="./popup-novo-pavimento.html">+ Novo Pavimento
+                            </a>
                         </div>
 
                         <form method="" action="">
@@ -77,6 +85,15 @@
                                     </select>
                                 </label>
 
+                                <label class="col-xl-2 col-lg-3 col-md-6 col-sm-6">Pavimento:
+                                    <select name="pavimento" class="selectpicker" multiple data-actions-box="true" data-live-search="true"
+                                        data-width="100%" required>
+                                        <option value="1">Pavimento 1</option>
+                                        <option value="2">Pavimento 3</option>
+                                        <option value="3">Pavimento 2</option>
+                                    </select>
+                                </label>
+
                                 <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12">
                                     <div class="label-clearfix last-lg"></div>
                                     <button type="submit" class="btn btn-primary btn-last-xl">Ok</button>
@@ -89,10 +106,10 @@
                 <div class="card">
                     <div class="card-body">
                         <section class="position-relative px-3">
-                            <div class="py-1 px-2 mb-1 h4 rounded bg-app-laranja text-white">Sub-Solo 1</div>
+                            <div class="py-1 px-2 mb-1 h4 rounded bg-app-laranja text-white">Pavimento 1</div>
 
                             <embed
-                                src="./CRF-PR-SPG-ARQ-EV-QUIOSQUES-R01-002.pdf"
+                                src="./pav1.pdf"
                                 width="100%" height="550px">
                         </section>
 
@@ -110,28 +127,128 @@
 
                             <tbody>
                                 <tr>
-                                    <td>32423</td>
-                                    <td>45,34</td>
+                                    <td>GRA006</td>
+                                    <td>1.434,57</td>
                                     <td>Ocupada</td>
+                                    <td>SPG-SMARTFIT</td>
+                                </tr>
+                                <tr>
+                                    <td>LUC002</td>
+                                    <td>22,34</td>
+                                    <td>Vago</td>
                                     <td>xxxxxx</td>
                                 </tr>
                                 <tr>
-                                    <td>234</td>
-                                    <td>45,34</td>
+                                    <td>EST001</td>
+                                    <td>106,25</td>
                                     <td>Ocupada</td>
+                                    <td>SPG - LAAV</td>
+                                </tr>
+                                <tr>
+                                    <td>EST003</td>
+                                    <td>420</td>
+                                    <td>Ocupada</td>
+                                    <td>SPG-GLOBAL AUTO CENTER</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <section class="position-relative px-3">
+                            <div class="py-1 px-2 mb-1 h4 rounded bg-app-laranja text-white">Pavimento 2</div>
+
+                            <embed src="./pav2.pdf" width="100%" height="550px">
+                        </section>
+
+                        <hr>
+
+                        <table class="table table-fixed table-hover tab-datatable-scroll-x" width="100%">
+                            <thead>
+                                <tr>
+                                    <th style="width: 150px;">LUC</th>
+                                    <th style="width: 150px;">Metragem</th>
+                                    <th style="width: 150px;">Situação</th>
+                                    <th style="width: 150px;">Lojista</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>GRA006</td>
+                                    <td>1.434,57</td>
+                                    <td>Ocupada</td>
+                                    <td>SPG-SMARTFIT</td>
+                                </tr>
+                                <tr>
+                                    <td>LUC002</td>
+                                    <td>22,34</td>
+                                    <td>Vago</td>
                                     <td>xxxxxx</td>
                                 </tr>
                                 <tr>
-                                    <td>2315</td>
-                                    <td>45,34</td>
+                                    <td>EST001</td>
+                                    <td>106,25</td>
                                     <td>Ocupada</td>
+                                    <td>SPG - LAAV</td>
+                                </tr>
+                                <tr>
+                                    <td>EST003</td>
+                                    <td>420</td>
+                                    <td>Ocupada</td>
+                                    <td>SPG-GLOBAL AUTO CENTER</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <section class="position-relative px-3">
+                            <div class="py-1 px-2 mb-1 h4 rounded bg-app-laranja text-white">Térreo</div>
+
+                            <embed src="./terreo.pdf" width="100%" height="550px">
+                        </section>
+
+                        <hr>
+
+                        <table class="table table-fixed table-hover tab-datatable-scroll-x" width="100%">
+                            <thead>
+                                <tr>
+                                    <th style="width: 150px;">LUC</th>
+                                    <th style="width: 150px;">Metragem</th>
+                                    <th style="width: 150px;">Situação</th>
+                                    <th style="width: 150px;">Lojista</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>GRA006</td>
+                                    <td>1.434,57</td>
+                                    <td>Ocupada</td>
+                                    <td>SPG-SMARTFIT</td>
+                                </tr>
+                                <tr>
+                                    <td>LUC002</td>
+                                    <td>22,34</td>
+                                    <td>Vago</td>
                                     <td>xxxxxx</td>
                                 </tr>
                                 <tr>
-                                    <td>325</td>
-                                    <td>45,34</td>
+                                    <td>EST001</td>
+                                    <td>106,25</td>
                                     <td>Ocupada</td>
-                                    <td>xxxxxx</td>
+                                    <td>SPG - LAAV</td>
+                                </tr>
+                                <tr>
+                                    <td>EST003</td>
+                                    <td>420</td>
+                                    <td>Ocupada</td>
+                                    <td>SPG-GLOBAL AUTO CENTER</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -141,8 +258,18 @@
         </main>
 
         <include src="./includes/footer.html"></include>
+
+        <!-- https://fancyapps.com/fancybox/plugins/html/#iframes -->
+        <script>
+            Fancybox.bind("[data-fancybox]", {
+                //
+            })
+        </script>
+
+        <style>
+            .fancybox__content {
+                background-color: transparent;
+            }
+        </style>
     </body>
 </html>
-
-
-
