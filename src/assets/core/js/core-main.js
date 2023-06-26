@@ -104,25 +104,28 @@ window.addEventListener("DOMContentLoaded", function () {
 * - tab-datatable-scroll-x
 ---------------------------------------------------------------------- */
 document.addEventListener("DOMContentLoaded", function () {
-    $('.tab-datatable-scroll-x').DataTable({
-        "order": [
-            [0, "asc"],
+    $(".tab-datatable-scroll-x").DataTable({
+        order: [[0, "asc"]],
+        ordering: true,
+        paging: true,
+        info: true,
+        scrollX: true,
+        scrollCollapse: true,
+
+        lengthMenu: [
+            [15, 30, 50, 80, -1],
+            [15, 30, 50, 80, "Tudo"],
         ],
-        "ordering": true,
-        "paging": true,
-        "info": true,
-        "scrollX": true,
-        "scrollCollapse": true,
 
-        "lengthMenu": [[-1, 20, 30, 50, 80], ["Tudo", 20, 30, 50, 80]],
+        columnDefs: [
+            {
+                targets: "no-sort",
+                orderable: false,
+            },
+        ],
 
-        columnDefs: [{
-            targets: "no-sort",
-            orderable: false
-        }],
-
-        "language": {
-            "url": "https://cdn.datatables.net/plug-ins/1.13.4/i18n/pt-BR.json"
+        language: {
+            url: "https://cdn.datatables.net/plug-ins/1.13.4/i18n/pt-BR.json",
         },
     });
 

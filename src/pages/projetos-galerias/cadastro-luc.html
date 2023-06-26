@@ -41,37 +41,54 @@
 
                         <form method="" action="">
                             <section class="row">
+                                <label class="col-xl-2 col-lg-3 col-md-6 col-sm-6">Formato:
+                                    <select name="formato" class="selectpicker" multiple data-actions-box="true" data-live-search="true" data-width="100%" required>
+                                        <option value="1">Formato 1</option>
+                                        <option value="2">Formato 3</option>
+                                        <option value="3">Formato 2</option>
+                                    </select>
+                                </label>
+
+                                <label class="col-xl-2 col-lg-3 col-md-6 col-sm-6">Região:
+                                    <select name="regiao" class="selectpicker" multiple data-actions-box="true" data-live-search="true"
+                                        data-width="100%" required>
+                                        <option value="1">Região 1</option>
+                                        <option value="2">Região 3</option>
+                                        <option value="3">Região 2</option>
+                                    </select>
+                                </label>
+
+                                <label class="col-xl-2 col-lg-3 col-md-6 col-sm-6">Site:
+                                    <select name="site" class="selectpicker" multiple data-actions-box="true" data-live-search="true"
+                                        data-width="100%" required>
+                                        <option value="1">Site 1</option>
+                                        <option value="2">Site 3</option>
+                                        <option value="3">Site 2</option>
+                                    </select>
+                                </label>
+
                                 <label class="col-xl-2 col-lg-3 col-md-6 col-sm-6">Tipo:
-                                    <select class="form-select" name="tipo" required>
-                                        <option value=""></option>
+                                    <select name="tipo" class="selectpicker" multiple data-actions-box="true" data-live-search="true" data-width="100%"
+                                        required>
                                         <option value="1">Satelites</option>
                                         <option value="2">Âncoras</option>
                                         <option value="3">Stan Alone</option>
                                     </select>
                                 </label>
 
-                                <label class="col-xl-2 col-lg-3 col-md-6 col-sm-6">LUC:
-                                    <input class="form-control" type="text" name="luc">
-                                </label>
-
-                                <label class="col-xl-1 col-lg-3 col-md-6 col-sm-6">Área:
-                                    <input class="form-control text-end" type="text" name="area" onkeydown="FormataValor(this,event,17,2);">
-                                </label>
-
-                                <label class="col-xl-2 col-lg-3 col-md-6 col-sm-6">Tipo:
-                                    <select class="form-select" name="" required>
-                                        <option value=""></option>
-                                        <option value="1">1</option>
+                                <label class="col-xl-2 col-lg-3 col-md-6 col-sm-6">Lojista:
+                                    <select name="lojista" class="selectpicker" multiple data-actions-box="true" data-live-search="true" data-width="100%"
+                                        required>
+                                        <option value="1">Lojista 1</option>
+                                        <option value="2">Lojista 3</option>
+                                        <option value="3">Lojista 2</option>
                                     </select>
                                 </label>
 
-                                <label class="col-xl-2 col-lg-5 col-md-6 col-sm-6">Contrato:
-                                    <input class="form-control" type="text" name="contrato">
-                                </label>
-
-                                <label class="col-xl-2 col-lg-5 col-md-6 col-sm-6">Nome Fantasia:
-                                    <input class="form-control" type="text" name="nome_fantasia">
-                                </label>
+                                <div class="col-xl-1 col-lg-2 col-md-12 col-sm-12">
+                                    <div class="label-clearfix last-lg"></div>
+                                    <button type="submit" class="btn btn-primary float-end">Ok</button>
+                                </div>
 
                                 <div class="col-xl-1 col-lg-2 col-md-12 col-sm-12">
                                     <div class="label-clearfix last-lg"></div>
@@ -91,60 +108,403 @@
                         <table class="table table-fixed table-hover tab-datatable-scroll-x" width="100%">
                             <thead>
                                 <tr>
-                                    <th style="width: 150px;">Tipo</th>
-                                    <th style="width: 150px;">LUC</th>
-                                    <th style="width: 150px;">Área</th>
-                                    <th style="width: 150px;">Tipo</th>
-                                    <th style="width: 150px;">Status</th>
-                                    <th style="width: 200px;">Contrato</th>
-                                    <th style="width: 200px;">Nome Fantasia</th>
-
-                                    <th style="width: 070px;" class="no-sort text-center">Edit</th>
-                                    <th style="width: 070px;" class="no-sort text-center">Del</th>
+                                    <th style="width: 150px;">Formato</th>
+                                    <th style="width: 150px;">Região</th>
+                                    <th style="width: 100px;">Sigla</th>
+                                    <th style="width: 200px;">Site</th>
+                                    <th style="width: 100px;">LUC</th>
+                                    <th style="width: 150px;">METRAGEM</th>
+                                    <th style="width: 150px;">TIPO</th>
+                                    <th style="width: 150px;">SITUAÇÃO</th>
+                                    <th style="width: 150px;">Contrato</th>
+                                    <th style="width: 250px;">LOJISTA</th>
                                 </tr>
                             </thead>
 
                             <tbody>
                                 <tr>
-                                    <td>Satelites</td>
-                                    <td>LUC 1</td>
-                                    <td>1212</td>
-                                    <td>Tipo 1</td>
-                                    <td>Status 1</td>
-                                    <td>Contrato 1</td>
-                                    <td>Nome Fantasia 1</td>
-
-                                    <td class="text-center">
-                                        <a class="text-secondary" data-bs-toggle="tooltip" data-bs-title="Edit" href="#">
-                                            <i class="bi bi-pencil-square fs-5 icon-tab"></i>
-                                        </a>
-                                    </td>
-                                    <td class="text-center">
-                                        <a class="text-secondary" data-bs-toggle="tooltip" data-bs-title="Del" data-row="delete" href="#">
-                                            <i class="bi bi-trash fs-5 icon-tab"></i>
-                                        </a>
-                                    </td>
+                                    <td>Sam's</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>CSF005</td>
+                                    <td>38,84</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02210000570</td>
+                                    <td>SPG-CARTAO CARREFOUR</td>
                                 </tr>
-
                                 <tr>
-                                    <td>Satelites</td>
-                                    <td>LUC 1</td>
-                                    <td>1212</td>
-                                    <td>Tipo 1</td>
-                                    <td>Status 1</td>
-                                    <td>Contrato 1</td>
-                                    <td>Nome Fantasia 1</td>
-
-                                    <td class="text-center">
-                                        <a class="text-secondary" data-bs-toggle="tooltip" data-bs-title="Edit" href="#">
-                                            <i class="bi bi-pencil-square fs-5 icon-tab"></i>
-                                        </a>
-                                    </td>
-                                    <td class="text-center">
-                                        <a class="text-secondary" data-bs-toggle="tooltip" data-bs-title="Del" data-row="delete" href="#">
-                                            <i class="bi bi-trash fs-5 icon-tab"></i>
-                                        </a>
-                                    </td>
+                                    <td>Todo Dia</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>DRG015</td>
+                                    <td>96,84</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02CRF107</td>
+                                    <td>SPG-DROGARIA CARREFOUR</td>
+                                </tr>
+                                <tr>
+                                    <td>Bom Preço</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>EST001</td>
+                                    <td>106,25</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02210000720</td>
+                                    <td>SPG - LAAV</td>
+                                </tr>
+                                <tr>
+                                    <td>Carrefour</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>EST003</td>
+                                    <td>420</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02210000306</td>
+                                    <td>SPG-GLOBAL AUTO CENTER</td>
+                                </tr>
+                                <tr>
+                                    <td>Atacadão</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>GRA006</td>
+                                    <td>1.434,57</td>
+                                    <td>Grandes Áreas</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02220000022</td>
+                                    <td>SPG-SMARTFIT</td>
+                                </tr>
+                                <tr>
+                                    <td>Carrefour Bairro</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC001</td>
+                                    <td>143,82</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02210000704</td>
+                                    <td>SPG-MC DONALDS</td>
+                                </tr>
+                                <tr>
+                                    <td>Big*</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC002</td>
+                                    <td>22,34</td>
+                                    <td>Satélite</td>
+                                    <td>Vago</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Nacional</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC003</td>
+                                    <td>45,79</td>
+                                    <td>Satélite</td>
+                                    <td>Vago</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Sam's</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC004</td>
+                                    <td>35,32</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02210002024</td>
+                                    <td>SPG - BERRY BOLWS AÇAI &amp; GELATO</td>
+                                </tr>
+                                <tr>
+                                    <td>Sam's</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC007</td>
+                                    <td>33,75</td>
+                                    <td>Satélite</td>
+                                    <td>Vago</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Sam's</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC008</td>
+                                    <td>53,42</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02210000236</td>
+                                    <td>SPG-MEGA SORTE</td>
+                                </tr>
+                                <tr>
+                                    <td>Sam's</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC009</td>
+                                    <td>45,17</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02210002085</td>
+                                    <td>SPG - EMPÓRIO VIA VITAL</td>
+                                </tr>
+                                <tr>
+                                    <td>Sam's</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC009C</td>
+                                    <td>27,88</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02210002144</td>
+                                    <td>SPG - LAUNDROMAT</td>
+                                </tr>
+                                <tr>
+                                    <td>Sam's</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC010</td>
+                                    <td>32,08</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02210000384</td>
+                                    <td>SPG - ALPS MODAS</td>
+                                </tr>
+                                <tr>
+                                    <td>Sam's</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC011</td>
+                                    <td>37,47</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02210000352</td>
+                                    <td>SPG - CACAU SHOW</td>
+                                </tr>
+                                <tr>
+                                    <td>Sam's</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC012</td>
+                                    <td>23,13</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02210002140</td>
+                                    <td>SPG - BINOTICA</td>
+                                </tr>
+                                <tr>
+                                    <td>Sam's</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC013</td>
+                                    <td>24,15</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02210000855</td>
+                                    <td>SPG - STORE ACESSORIOS</td>
+                                </tr>
+                                <tr>
+                                    <td>Sam's</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC014</td>
+                                    <td>61,21</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02210002137</td>
+                                    <td>SPG - NATURA</td>
+                                </tr>
+                                <tr>
+                                    <td>Sam's</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC016</td>
+                                    <td>44,89</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02210000210</td>
+                                    <td>SPG - O BOTICÁRIO</td>
+                                </tr>
+                                <tr>
+                                    <td>Sam's</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC017</td>
+                                    <td>76,6</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02210000481</td>
+                                    <td>SPG - UNIC CABELEIREIROS</td>
+                                </tr>
+                                <tr>
+                                    <td>Sam's</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC017A</td>
+                                    <td>33,49</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02210002057</td>
+                                    <td>SPG - NOSTRO FUMO</td>
+                                </tr>
+                                <tr>
+                                    <td>Sam's</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC018</td>
+                                    <td>41,5</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02210000479</td>
+                                    <td>SPG-BURGER KING</td>
+                                </tr>
+                                <tr>
+                                    <td>Sam's</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC019</td>
+                                    <td>41,89</td>
+                                    <td>Satélite</td>
+                                    <td>Vago</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Sam's</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC020</td>
+                                    <td>56,49</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02210002055</td>
+                                    <td>SPG - SHAWARMA ZIZO</td>
+                                </tr>
+                                <tr>
+                                    <td>Sam's</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC021</td>
+                                    <td>69,29</td>
+                                    <td>Satélite</td>
+                                    <td>Vago</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Sam's</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC022</td>
+                                    <td>25,26</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02210000749</td>
+                                    <td>SPG - BARBEARIA SANTANA</td>
+                                </tr>
+                                <tr>
+                                    <td>Sam's</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC023</td>
+                                    <td>32,54</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02210001938</td>
+                                    <td>SPG - PET ZEUZ</td>
+                                </tr>
+                                <tr>
+                                    <td>Sam's</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC024</td>
+                                    <td>35</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02210000820</td>
+                                    <td>SPG - WESTERN UNION</td>
+                                </tr>
+                                <tr>
+                                    <td>Sam's</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC025</td>
+                                    <td>53,52</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02210000830</td>
+                                    <td>SPG-D´PIL</td>
+                                </tr>
+                                <tr>
+                                    <td>Sam's</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC026</td>
+                                    <td>19,68</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02210000700</td>
+                                    <td>SPG - FRESH COCO</td>
+                                </tr>
+                                <tr>
+                                    <td>Sam's</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC028</td>
+                                    <td>0</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02210001811</td>
+                                    <td>SPG-BIJOUX NOW</td>
+                                </tr>
+                                <tr>
+                                    <td>Sam's</td>
+                                    <td></td>
+                                    <td>SPG</td>
+                                    <td>HIPER GIOVANI GRONCHI</td>
+                                    <td>LUC029</td>
+                                    <td>97,75</td>
+                                    <td>Satélite</td>
+                                    <td>Ocupado</td>
+                                    <td>BR02210001941</td>
+                                    <td>SPG - LOCALIZA</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -156,5 +516,3 @@
         <include src="./includes/footer.html"></include>
     </body>
 </html>
-
-

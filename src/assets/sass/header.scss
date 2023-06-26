@@ -12,46 +12,46 @@
     border-top: 1px solid rgb(153, 153, 153);
 }
 
-.nav-item.dropdown.active > .nav-link.dropdown-toggle{
+.header-app .nav-item.dropdown.active > .nav-link.dropdown-toggle{
     color: #fff;
 }
-.dropdown-item.active,
-.dropdown-item:active {
+.header-app .dropdown-item.active,
+.header-app .dropdown-item:active {
     background-color: var(--color-roxo);
 }
 
-.dropstart .dropdown-toggle,
-.dropend .dropdown-toggle {
+.header-app .dropstart .dropdown-toggle,
+.header-app .dropend .dropdown-toggle {
     color: var(--bs-dropdown-color)!important;
 }
 
-.dropdown-item:hover,
-.dropstart:hover .dropdown-toggle,
-.dropend:hover .dropdown-toggle {
+.header-app .dropdown-item:hover,
+.header-app .dropstart:hover .dropdown-toggle,
+.header-app .dropend:hover .dropdown-toggle {
     color: #fff!important;
     background-color: var(--color-laranja);
 }
 
-.dropstart .dropdown-toggle,
-.dropend .dropdown-toggle {
+.header-app .dropstart .dropdown-toggle,
+.header-app .dropend .dropdown-toggle {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
 }
-.dropstart .dropdown-toggle { padding-right: 1em !important;}
-.dropend .dropdown-toggle   { padding-left: 1em !important;}
+.header-app .dropstart .dropdown-toggle { padding-right: 1em !important;}
+.header-app .dropend .dropdown-toggle   { padding-left: 1em !important;}
 
 @media screen and (min-width: 1200px) {
-    .dropdown .dropdown-menu {
+    .header-app.dropdown .dropdown-menu {
         display: none;
     }
 
-    .dropdown:hover>.dropdown-menu,
-    .dropend:hover>.dropdown-menu {
+    .header-app .dropdown:hover>.dropdown-menu,
+    .header-app .dropend:hover>.dropdown-menu {
         display: block;
         margin-top: 0em;
     }
 
-    .dropend:hover>.dropdown-menu {
+    .header-app .dropend:hover>.dropdown-menu {
         position: absolute;
         top: 0;
         left: 100%;
