@@ -27,7 +27,7 @@ const cards = [
     {
         name: "Projetos Galerias",
         icon: "bi bi-clipboard2-check",
-        link: "../projetos-galerias/planta-galeria.html",
+        link: "../projetos-galerias/page-planta-galeria.html",
     },
 ];
 

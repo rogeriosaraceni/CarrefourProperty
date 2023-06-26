@@ -27,7 +27,7 @@ const cards = [
     {
         name: "Projetos Galerias",
         image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
-        link: "../projetos-galerias/planta-galeria.html",
+        link: "../projetos-galerias/page-planta-galeria.html",
     },
 ];
 
