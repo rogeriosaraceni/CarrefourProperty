@@ -40,7 +40,7 @@
 .header-app .dropstart .dropdown-toggle { padding-right: 1em !important;}
 .header-app .dropend .dropdown-toggle   { padding-left: 1em !important;}
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
     .header-app.dropdown .dropdown-menu {
         display: none;
     }
@@ -60,7 +60,7 @@
 
 
 /* offcanvas-collapse (custom) */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 992px) {
     .offcanvas-collapse {
         position: fixed;
         /* Height of navbar */
