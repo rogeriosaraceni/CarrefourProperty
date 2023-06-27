@@ -1,0 +1,80 @@
+am4core.ready(function () {
+    am4core.useTheme(am4themes_animated);
+
+    // Create chart instance
+    var chart = am4core.create("chartdiv-lucs-coordenador", am4charts.XYChart);
+    chart.maskBullets = false;
+    chart.logo.disabled = true;
+
+    // Add data
+    chart.data = [
+        {
+            indicador: "Wilson Fernandes",
+            ocupado: 1023,
+            vago: 255,
+        },
+        {
+            indicador: "Thaiz Magnino",
+            ocupado: 216,
+            vago: 64,
+        },
+        {
+            indicador: "Thiago Zupo",
+            ocupado: 681,
+            vago: 135,
+        },
+        {
+            indicador: "Vinícius Guimarães",
+            ocupado: 841,
+            vago: 127,
+        },
+    ];
+
+    // Create axes
+    var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+    categoryAxis.dataFields.category = "indicador";
+    categoryAxis.renderer.grid.template.location = 0;
+    categoryAxis.renderer.minGridDistance = 10;
+    categoryAxis.renderer.grid.template.disabled = true;
+    categoryAxis.renderer.labels.template.fontSize = 13;
+    categoryAxis.renderer.labels.template.horizontalCenter = "right";
+    categoryAxis.renderer.labels.template.verticalCenter = "middle";
+    categoryAxis.renderer.labels.template.rotation = -45;
+
+    var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+    valueAxis.min = 0;
+    valueAxis.renderer.labels.template.fontSize = 14;
+    //valueAxis.renderer.labels.template.disabled = true;
+    valueAxis.renderer.grid.template.disabled = true;
+
+    function createSeries(field, name, stacked, color) {
+        var series = chart.series.push(new am4charts.ColumnSeries());
+        series.name = name;
+        series.dataFields.valueY = field;
+        series.dataFields.categoryX = "indicador";
+        series.sequencedInterpolation = true;
+        series.stacked = stacked;
+        series.columns.template.tooltipText = "[bold]{name}[/]\n[font-size:14px]{categoryX}: {valueY}";
+
+        series.columns.template.width = am4core.percent(70);
+        series.columns.template.fill = color;
+        series.stroke = color;
+
+        var labelBullet = series.bullets.push(new am4charts.LabelBullet());
+        labelBullet.label.text = "{valueY}";
+        labelBullet.locationY = 0.5;
+        labelBullet.fontSize = 13;
+
+        return series;
+    }
+
+    createSeries("ocupado", "Ocupado", true, am4core.color("#cd3f53"));
+    createSeries("vago", "Vago", true, am4core.color("#fbc8ab"));
+
+    // Legend
+    chart.legend = new am4charts.Legend();
+
+    var markerTemplate = chart.legend.markers.template;
+    markerTemplate.width = 16;
+    markerTemplate.height = 16;
+});

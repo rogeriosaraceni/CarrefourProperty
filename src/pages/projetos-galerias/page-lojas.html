@@ -8,6 +8,13 @@
                 width: 100%;
                 height: 400px;
             }
+            .table-responsive{
+                margin-bottom: 1rem;
+                padding-bottom: 0.5rem;
+            }
+            .table-responsive .table{
+                margin-bottom: 0;
+            }
         </style>
     </head>
 
@@ -40,20 +47,21 @@
             </section>
 
             <section class="container-fluid">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="text-center">Resumo NewCo</h4>
 
-                <div class="row">
-                    <article class="col-md-6">
-                        <div class="card">
-                            <div class="card-body">
+                        <div class="row">
+                            <article class="col-lg-6">
                                 <div class="table-responsive">
                                     <table class="table table-fixed text-center">
                                         <thead>
                                             <tr>
-                                                <th>ABL m²</th>
-                                                <th>Ocupado</th>
-                                                <th>Vago</th>
-                                                <th>Total</th>
-                                                <th>% Vacância</th>
+                                                <th style="width: 90px;">ABL m²</th>
+                                                <th style="width: 90px;">Ocupado</th>
+                                                <th style="width: 90px;">Vago</th>
+                                                <th style="width: 90px;">Total</th>
+                                                <th style="width: 90px;">% Vacância</th>
                                             </tr>
                                         </thead>
 
@@ -86,28 +94,23 @@
                                     </table>
                                 </div>
 
-
-                                <div class="d-flex flex-column align-items-center">
+                                <div class="d-flex flex-column align-items-center border rounded p-2">
                                     <h4>ABL m²</h4>
-                                    <div class="box-chart" id="chartdiv-abl"></div>
+                                    <div class="box-chart" id="chartdiv-abl-resumo"></div>
                                 </div>
-                            </div>
-                        </div>
-                    </article>
+                            </article>
 
-                    <article class="col-md-6">
-                        <div class="card">
-                            <div class="card-body">
+                            <article class="col-lg-6">
                                 <div class="table-responsive">
                                     <table class="table table-fixed text-center">
                                         <thead>
                                             <tr>
-                                                <th>Qnt. Lucs</th>
-                                                <th>Ocupado</th>
-                                                <th>Vago</th>
-                                                <th>Total</th>
-                                                <th>% Vacância</th>
-                                                <th>Qnt. Sites</th>
+                                                <th style="width: 90px;">Qnt. Lucs</th>
+                                                <th style="width: 90px;">Ocupado</th>
+                                                <th style="width: 90px;">Vago</th>
+                                                <th style="width: 90px;">Total</th>
+                                                <th style="width: 90px;">% Vacância</th>
+                                                <th style="width: 90px;">Qnt. Sites</th>
                                             </tr>
                                         </thead>
 
@@ -143,22 +146,487 @@
                                     </table>
                                 </div>
 
-
-                                <div class="d-flex flex-column align-items-center">
+                                <div class="d-flex flex-column align-items-center border rounded p-2">
                                     <h4>Quantidade Luc's</h4>
-                                    <div class="box-chart" id="chartdiv-lucs"></div>
+                                    <div class="box-chart" id="chartdiv-lucs-resumo"></div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="text-center">Coordenador</h4>
+
+                        <div class="row">
+                            <article class="col-lg-6">
+                                <div class="table-responsive">
+                                    <table class="table table-fixed text-center">
+                                        <thead>
+                                            <tr>
+                                                <th>ABL m²</th>
+                                                <th>Ocupado</th>
+                                                <th>Vago</th>
+                                                <th>Total</th>
+                                                <th>% Vacância</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>Wilson Fernandes</td>
+                                                <td>125.014</td>
+                                                <td>20.858</td>
+                                                <td>145.871</td>
+                                                <td>14,3%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Thaiz Magnino</td>
+                                                <td>51.475</td>
+                                                <td>7.459</td>
+                                                <td>58.934</td>
+                                                <td>12,7%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Thiago Zupo</td>
+                                                <td>147.249</td>
+                                                <td>7.821</td>
+                                                <td>155.070</td>
+                                                <td>5,0%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Vinícius Guimarães</td>
+                                                <td>92.228</td>
+                                                <td>6.045</td>
+                                                <td>98.273</td>
+                                                <td>6,2%</td>
+                                            </tr>
+                                        </tbody>
+
+                                        <tfoot>
+                                            <tr class="fw-bold">
+                                                <td>NewCO</td>
+                                                <td>415.966</td>
+                                                <td>42.183</td>
+                                                <td>458.149</td>
+                                                <td>9,2%</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+
+                                <div class="d-flex flex-column align-items-center border rounded p-2">
+                                    <h4>ABL m²</h4>
+                                    <div class="box-chart" id="chartdiv-abl-coordenador"></div>
+                                </div>
+                            </article>
+
+                            <article class="col-lg-6">
+                                <div class="table-responsive">
+                                    <table class="table table-fixed text-center">
+                                        <thead>
+                                            <tr>
+                                                <th>Qnt. Lucs</th>
+                                                <th>Ocupado</th>
+                                                <th>Vago</th>
+                                                <th>Total</th>
+                                                <th>% Vacância</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>Wilson Fernandes</td>
+                                                <td>1.023</td>
+                                                <td>255</td>
+                                                <td>1.278</td>
+                                                <td>19,95%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Thaiz Magnino</td>
+                                                <td>216</td>
+                                                <td>64</td>
+                                                <td>280</td>
+                                                <td>22,86%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Thiago Zupo</td>
+                                                <td>681</td>
+                                                <td>135</td>
+                                                <td>816</td>
+                                                <td>16,54%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Vinícius Guimarães</td>
+                                                <td>841</td>
+                                                <td>127</td>
+                                                <td>968</td>
+                                                <td>13,12%</td>
+                                            </tr>
+                                        </tbody>
+
+                                        <tfoot>
+                                            <tr class="fw-bold">
+                                                <td>NewCO</td>
+                                                <td>2.761</td>
+                                                <td>581</td>
+                                                <td>3.342</td>
+                                                <td>17,38%</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+
+                                <div class="d-flex flex-column align-items-center border rounded p-2">
+                                    <h4>Quantidade Luc's</h4>
+                                    <div class="box-chart" id="chartdiv-lucs-coordenador"></div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="text-center">RANKING MAIOR VACÂNCIA (Qnt. Luc Vaga)</h5>
+
+                                <div class="table-responsive">
+                                    <table class="table table-fixed text-center">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 100px;">Estado</th>
+                                                <th style="width: 100px;">Abl Total</th>
+                                                <th style="width: 100px;">Abl Vaga</th>
+                                                <th style="width: 100px;"># Luc Total</th>
+                                                <th style="width: 100px;"># Luc Vaga</th>
+                                                <th style="width: 150px;">% Vacância Abl</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>SP</td>
+                                                <td>239.603</td>
+                                                <td>22.441</td>
+                                                <td>1639</td>
+                                                <td>284</td>
+                                                <td>9,4%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>RS</td>
+                                                <td>21.262</td>
+                                                <td>6.885</td>
+                                                <td>295</td>
+                                                <td>96</td>
+                                                <td>32,4%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>BA</td>
+                                                <td>15.121</td>
+                                                <td>1.634</td>
+                                                <td>193</td>
+                                                <td>29</td>
+                                                <td>10,8%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>PR</td>
+                                                <td>18.052</td>
+                                                <td>3.385</td>
+                                                <td>166</td>
+                                                <td>24</td>
+                                                <td>18,7%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>RJ</td>
+                                                <td>58.873</td>
+                                                <td>1.812</td>
+                                                <td>148</td>
+                                                <td>22</td>
+                                                <td>3,1%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>PE</td>
+                                                <td>10.869</td>
+                                                <td>680</td>
+                                                <td>123</td>
+                                                <td>22</td>
+                                                <td>6,3%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>SC</td>
+                                                <td>20.504</td>
+                                                <td>1.464</td>
+                                                <td>103</td>
+                                                <td>21</td>
+                                                <td>7,1%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>MG</td>
+                                                <td>7.049</td>
+                                                <td>1.075</td>
+                                                <td>113</td>
+                                                <td>19</td>
+                                                <td>15,3%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>GO</td>
+                                                <td>5.527</td>
+                                                <td>908</td>
+                                                <td>78</td>
+                                                <td>14</td>
+                                                <td>16,4%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>DF</td>
+                                                <td>24.392</td>
+                                                <td>432</td>
+                                                <td>87</td>
+                                                <td>13</td>
+                                                <td>1,8%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>CE</td>
+                                                <td>9.120</td>
+                                                <td>456</td>
+                                                <td>80</td>
+                                                <td>10</td>
+                                                <td>5,0%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>AM</td>
+                                                <td>2.408</td>
+                                                <td>235</td>
+                                                <td>65</td>
+                                                <td>6</td>
+                                                <td>9,7%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>RN</td>
+                                                <td>15.029</td>
+                                                <td>224</td>
+                                                <td>76</td>
+                                                <td>6</td>
+                                                <td>1,5%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>SE</td>
+                                                <td>1.761</td>
+                                                <td>127</td>
+                                                <td>29</td>
+                                                <td>4</td>
+                                                <td>7,2%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>AL</td>
+                                                <td>3.723</td>
+                                                <td>122</td>
+                                                <td>70</td>
+                                                <td>3</td>
+                                                <td>3,3%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>MS</td>
+                                                <td>2.313</td>
+                                                <td>111</td>
+                                                <td>25</td>
+                                                <td>3</td>
+                                                <td>4,8%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>PI</td>
+                                                <td>101</td>
+                                                <td>66</td>
+                                                <td>3</td>
+                                                <td>2</td>
+                                                <td>65,5%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>PB</td>
+                                                <td>1.701</td>
+                                                <td>97</td>
+                                                <td>31</td>
+                                                <td>2</td>
+                                                <td>5,7%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>MA</td>
+                                                <td>213</td>
+                                                <td>30</td>
+                                                <td>5</td>
+                                                <td>1</td>
+                                                <td>14,1%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ES</td>
+                                                <td>529</td>
+                                                <td>0</td>
+                                                <td>13</td>
+                                                <td>0</td>
+                                                <td>0,0%</td>
+                                            </tr>
+                                            <tr class="fw-bold">
+                                                <td>Total</td>
+                                                <td>458.149</td>
+                                                <td>42.183</td>
+                                                <td>3.342</td>
+                                                <td>581</td>
+                                                <td>9,21%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
-                    </article>
+                    </div>
 
 
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="text-center">RANKING VACÂNCIA POR CONSULTORES (Qnt. Luc vaga)</h5>
 
-
+                                <div class="table-responsive">
+                                    <table class="table table-fixed text-center">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 150px;">Consultor</th>
+                                                <th style="width: 100px;">Abl Total</th>
+                                                <th style="width: 100px;">Abl Vaga</th>
+                                                <th style="width: 100px;"># Luc Total</th>
+                                                <th style="width: 100px;"># Luc Vaga</th>
+                                                <th style="width: 150px;">% Vacância Abl</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Vinícius Baur</td>
+                                                <td>21.262</td>
+                                                <td>6.885</td>
+                                                <td>295</td>
+                                                <td>96</td>
+                                                <td>32,4%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jeane Ferreira</td>
+                                                <td>57.637</td>
+                                                <td>3.436</td>
+                                                <td>610</td>
+                                                <td>79</td>
+                                                <td>6,0%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>VAGO</td>
+                                                <td>40.636</td>
+                                                <td>2.610</td>
+                                                <td>358</td>
+                                                <td>48</td>
+                                                <td>6,4%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Alessandro Melo</td>
+                                                <td>38.555</td>
+                                                <td>4.849</td>
+                                                <td>269</td>
+                                                <td>45</td>
+                                                <td>12,6%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Audrey Justino</td>
+                                                <td>23.776</td>
+                                                <td>3.345</td>
+                                                <td>253</td>
+                                                <td>44</td>
+                                                <td>14,1%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ana Paula Bueno</td>
+                                                <td>48.639</td>
+                                                <td>2.339</td>
+                                                <td>257</td>
+                                                <td>41</td>
+                                                <td>4,8%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Luis Marques</td>
+                                                <td>33.967</td>
+                                                <td>4.019</td>
+                                                <td>264</td>
+                                                <td>36</td>
+                                                <td>11,8%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Anderson Carlos</td>
+                                                <td>30.959</td>
+                                                <td>2.090</td>
+                                                <td>233</td>
+                                                <td>36</td>
+                                                <td>6,7%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Débora Paulino</td>
+                                                <td>28.312</td>
+                                                <td>1.759</td>
+                                                <td>197</td>
+                                                <td>34</td>
+                                                <td>6,2%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cintia Costabile</td>
+                                                <td>26.650</td>
+                                                <td>4.212</td>
+                                                <td>151</td>
+                                                <td>33</td>
+                                                <td>15,8%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cris Kelly</td>
+                                                <td>31.796</td>
+                                                <td>3.247</td>
+                                                <td>123</td>
+                                                <td>31</td>
+                                                <td>10,2%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Marcos Silva</td>
+                                                <td>15.016</td>
+                                                <td>1.430</td>
+                                                <td>155</td>
+                                                <td>29</td>
+                                                <td>9,5%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Celso Figueiredo</td>
+                                                <td>60.456</td>
+                                                <td>1.963</td>
+                                                <td>171</td>
+                                                <td>29</td>
+                                                <td>3,2%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>N/A</td>
+                                                <td>488</td>
+                                                <td>0</td>
+                                                <td>6</td>
+                                                <td>0</td>
+                                                <td>0,0%</td>
+                                            </tr>
+                                            <tr class="fw-bold">
+                                                <td></td>
+                                                <td>458.149</td>
+                                                <td>42.183</td>
+                                                <td>3.342</td>
+                                                <td>581</td>
+                                                <td>9,21%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-
-
             </section>
         </main>
 
@@ -168,146 +636,12 @@
         <script src="https://www.amcharts.com/lib/4/charts.js"></script>
         <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
 
-        <script>
-            am4core.ready(function () {
-                am4core.useTheme(am4themes_animated);
-
-                // Create chart instance
-                var chart = am4core.create("chartdiv-abl", am4charts.XYChart);
-                chart.maskBullets = false;
-
-                let title = chart.titles.create();
-                title.text = "";
-                title.fontSize = 20;
-                title.marginBottom = 5;
-                title.align = "center";
-
-                // Add data
-                chart.data = [
-                    {
-                        "indicador": "BIG",
-                        "ocupado": 134158,
-                        "vago": 18784,
-                    },
-                    {
-                        "indicador": "CRF",
-                        "ocupado": 281807,
-                        "vago": 23400,
-                    },
-                ];
-
-                // Create axes
-                var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
-                categoryAxis.dataFields.category = "indicador";
-                categoryAxis.renderer.grid.template.location = 0;
-                //categoryAxis.renderer.grid.template.disabled = true;
-
-                var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-                valueAxis.min = 0;
-                //valueAxis.renderer.labels.template.disabled = true;
-                valueAxis.renderer.grid.template.disabled = true;
-
-                function createSeries(field, name, stacked, color) {
-                    var series = chart.series.push(new am4charts.ColumnSeries());
-                    series.name = name;
-                    series.dataFields.valueY = field;
-                    series.dataFields.categoryX = "indicador";
-                    series.sequencedInterpolation = true;
-                    series.stacked = stacked;
-                    series.columns.template.tooltipText = "[bold]{name}[/]\n[font-size:14px]{categoryX}: {valueY}";
-
-                    series.columns.template.width = am4core.percent(45);
-                    series.columns.template.fill = color;
-                    series.stroke = color;
-
-                    var labelBullet = series.bullets.push(new am4charts.LabelBullet());
-                    labelBullet.label.text = "{valueY}";
-                    labelBullet.locationY = 0.5;
-
-                    return series;
-                }
-
-                createSeries("ocupado", "Ocupado", true, am4core.color("#4472c4"));
-                createSeries("vago", "Vago", true, am4core.color("#ed7d31"));
-
-                // Legend
-                chart.legend = new am4charts.Legend();
-
-                var markerTemplate = chart.legend.markers.template;
-                markerTemplate.width = 20;
-                markerTemplate.height = 20;
-            });
-        </script>
-
-        <script>
-            am4core.ready(function () {
-                am4core.useTheme(am4themes_animated);
-
-                // Create chart instance
-                var chart = am4core.create("chartdiv-lucs", am4charts.XYChart);
-                chart.maskBullets = false;
-
-                let title = chart.titles.create();
-                title.text = "";
-                title.fontSize = 20;
-                title.marginBottom = 5;
-                title.align = "center";
-
-                // Add data
-                chart.data = [
-                    {
-                        "indicador": "BIG",
-                        "ocupado": 1009,
-                        "vago": 309,
-                    },
-                    {
-                        "indicador": "CRF",
-                        "ocupado": 1752,
-                        "vago": 272,
-                    },
-                ];
-
-                // Create axes
-                var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
-                categoryAxis.dataFields.category = "indicador";
-                categoryAxis.renderer.grid.template.location = 0;
-                //categoryAxis.renderer.grid.template.disabled = true;
-
-                var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-                valueAxis.min = 0;
-                //valueAxis.renderer.labels.template.disabled = true;
-                valueAxis.renderer.grid.template.disabled = true;
-
-                function createSeries(field, name, stacked, color) {
-                    var series = chart.series.push(new am4charts.ColumnSeries());
-                    series.name = name;
-                    series.dataFields.valueY = field;
-                    series.dataFields.categoryX = "indicador";
-                    series.sequencedInterpolation = true;
-                    series.stacked = stacked;
-                    series.columns.template.tooltipText = "[bold]{name}[/]\n[font-size:14px]{categoryX}: {valueY}";
-
-                    series.columns.template.width = am4core.percent(45);
-                    series.columns.template.fill = color;
-                    series.stroke = color;
-
-                    var labelBullet = series.bullets.push(new am4charts.LabelBullet());
-                    labelBullet.label.text = "{valueY}";
-                    labelBullet.locationY = 0.5;
-
-                    return series;
-                }
-
-                createSeries("ocupado", "Ocupado", true, am4core.color("#cd3f53"));
-                createSeries("vago", "Vago", true, am4core.color("#fbc8ab"));
-
-                // Legend
-                chart.legend = new am4charts.Legend();
-
-                var markerTemplate = chart.legend.markers.template;
-                markerTemplate.width = 20;
-                markerTemplate.height = 20;
-            });
-        </script>
+        <script src="./script-chart-1.js"></script>
+        <script src="./script-chart-2.js"></script>
+        <script src="./script-chart-3.js"></script>
+        <script src="./script-chart-4.js"></script>
     </body>
 </html>
+
+
+
