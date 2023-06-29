@@ -9,7 +9,7 @@
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
     color: #fff;
-    background-color: var(--color-roxo);
+    background-color: var(--color-purple-400);
 }
 
 .table>thead>tr>th,
@@ -28,7 +28,7 @@
 }
 
 .icon-tab:hover {
-    color: var(--color-laranja);
+    color: var(--color-orange-400);
 }
 
 
@@ -74,8 +74,8 @@ table.dataTable tbody tr {
 * -------------------------------------------------------------------- */
 .dataTables_paginate .active>.page-link,
 .dataTables_paginate .page-link.active {
-    background-color: var(--color-laranja);
-    border-color: var(--color-laranja);
+    background-color: var(--color-orange-400);
+    border-color: var(--color-orange-400);
 }
 .dataTables_paginate .disabled>.page-link,
 .dataTables_paginate .page-link.disabled {

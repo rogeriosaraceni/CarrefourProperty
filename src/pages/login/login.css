@@ -19,7 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-roxo);
+    background-color: var(--color-purple-400);
 }
 .box-left .logo-login-left{
     max-width: 250px;
@@ -99,7 +99,7 @@
 }
 
 .title-login{
-    color: var(--color-roxo);
+    color: var(--color-purple-400);
     font-size: 3rem;
     font-family: 'Banana Yeti';
 }
@@ -108,7 +108,7 @@
 * - form-control
 ---------------------------------------------------------------------- */
 .form-control{
-    --placehorder-color-text: var(--color-roxo);
+    --placehorder-color-text: var(--color-purple-400);
 }
 .form-control {
     background: transparent;
@@ -168,7 +168,7 @@
 .btn-submit:focus {
     box-shadow: none;
     color: #fff!important;
-    background-color: var(--color-roxo);
+    background-color: var(--color-purple-400);
     border-color: transparent!important;
 }
 

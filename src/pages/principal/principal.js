@@ -38,15 +38,15 @@ function generateCardsTemplate(cards) {
 
     cards.forEach((card) => {
         html += `
-                        <a class="link-card col-lg-2 col-md-4 col-sm-6" href="${card.link}">
-                            <figure>
-                                <div class="content-icon">
-                                    <i class="${card.icon}"></i>
-                                </div>
-                            </figure>
-                            <h4>${card.name}</h4>
-                        </a>
-                    `;
+            <a class="link-card col-lg-2 col-md-4 col-sm-6" href="${card.link}">
+                <figure>
+                    <div class="content-icon">
+                        <i class="${card.icon}"></i>
+                    </div>
+                </figure>
+                <h4>${card.name}</h4>
+            </a>
+        `;
     });
     return html;
 }
