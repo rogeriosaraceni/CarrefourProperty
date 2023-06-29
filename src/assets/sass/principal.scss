@@ -51,7 +51,6 @@
     border-radius: 0 0 0.5rem 0.5rem;
     transition: all 0.3s;
     color: #fff;
-    background-color: var(--color-purple-400);
 }
 
 .principal-cards .link-card:hover figure {
@@ -66,6 +65,6 @@
 }
 
 .principal-cards .link-card:hover h4 {
-    color: #fff;
-    background-color: var(--color-orange-400);
+    color: var(--color-purple-400);
+    background-color: #fff;
 }

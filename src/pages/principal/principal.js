@@ -1,33 +1,39 @@
 const cards = [
     {
-        name: "Ficha Técnica",
-        icon: "bi bi-file-earmark-ruled",
         link: "../ficha-tecnica/index.html",
+        icon: "bi bi-file-earmark-ruled",
+        name: "Ficha Técnica",
+        nameClassColor: "bg-app-green-400",
     },
     {
-        name: "DOS",
-        icon: "bi bi-bar-chart",
         link: "../dos/index.html",
+        icon: "bi bi-bar-chart",
+        name: "DOS",
+        nameClassColor: "bg-app-cyan-400",
     },
     {
-        name: "Manutenção",
-        icon: "bi bi-gear",
         link: "../manutencao/index.html",
+        icon: "bi bi-gear",
+        name: "Manutenção",
+        nameClassColor: "bg-app-blue-400",
     },
     {
-        name: "Operações Galerias",
-        icon: "bi bi-columns",
         link: "../operacoes-galerias/index.html",
+        icon: "bi bi-columns",
+        name: "Operações Galerias",
+        nameClassColor: "bg-app-pink-700",
     },
     {
-        name: "Comercial",
-        icon: "bi bi-buildings",
         link: "../comercial/index.html",
+        icon: "bi bi-buildings",
+        name: "Comercial",
+        nameClassColor: "bg-app-red-400",
     },
     {
-        name: "Projetos Galerias",
-        icon: "bi bi-clipboard2-check",
         link: "../projetos-galerias/page-planta-galeria.html",
+        icon: "bi bi-clipboard2-check",
+        name: "Projetos Galerias",
+        nameClassColor: "bg-app-orange-400",
     },
 ];
 
@@ -44,7 +50,7 @@ function generateCardsTemplate(cards) {
                         <i class="${card.icon}"></i>
                     </div>
                 </figure>
-                <h4>${card.name}</h4>
+                <h4 class="${card.nameClassColor}">${card.name}</h4>
             </a>
         `;
     });
