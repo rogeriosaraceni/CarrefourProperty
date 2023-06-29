@@ -44,7 +44,8 @@ function generateCardsTemplate(cards) {
 
     cards.forEach((card) => {
         html += `
-            <a class="link-card col-lg-2 col-md-4 col-sm-6" href="${card.link}">
+            <div class="col-lg-2 col-md-4 col-sm-6">
+            <a class="link-card" href="${card.link}">
                 <figure>
                     <div class="content-icon">
                         <i class="${card.icon}"></i>
@@ -52,6 +53,7 @@ function generateCardsTemplate(cards) {
                 </figure>
                 <h4 class="${card.nameClassColor}">${card.name}</h4>
             </a>
+            </div>
         `;
     });
     return html;

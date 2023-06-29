@@ -27,7 +27,7 @@ const timelines = [
     },
 
     {
-        status: "status-progresso",
+        status: "status-progresso status-active",
         number: "3",
         link: "#",
         iconStatus: "bi bi-check-circle-fill",
@@ -66,12 +66,12 @@ const timelines = [
     },
 
     {
-        status: "status-concluido",
+        status: "status-aguardando",
         number: "6",
         link: "#",
-        iconStatus: "bi bi-check-circle-fill",
-        iconStatusTooltip: "Concluído",
-        value: "100",
+        iconStatus: "bi bi-stop-circle",
+        iconStatusTooltip: "Aguardando",
+        value: "0",
         name: "Prevenção",
         text: "Processos Concluídos",
         data: "16/06/2023",
@@ -79,12 +79,12 @@ const timelines = [
     },
 
     {
-        status: "status-concluido",
+        status: "status-aguardando",
         number: "7",
         link: "#",
-        iconStatus: "bi bi-check-circle-fill",
-        iconStatusTooltip: "Concluído",
-        value: "100",
+        iconStatus: "bi bi-stop-circle",
+        iconStatusTooltip: "Aguardando",
+        value: "0",
         name: "Sesmit",
         text: "Processos Concluídos",
         data: "16/06/2023",
@@ -92,12 +92,12 @@ const timelines = [
     },
 
     {
-        status: "status-concluido",
+        status: "status-aguardando",
         number: "8",
         link: "#",
-        iconStatus: "bi bi-check-circle-fill",
-        iconStatusTooltip: "Concluído",
-        value: "100",
+        iconStatus: "bi bi-stop-circle",
+        iconStatusTooltip: "Aguardando",
+        value: "0",
         name: "Execução",
         text: "Processos Concluídos",
         data: "16/06/2023",
@@ -105,12 +105,12 @@ const timelines = [
     },
 
     {
-        status: "status-concluido",
+        status: "status-aguardando",
         number: "9",
         link: "#",
-        iconStatus: "bi bi-check-circle-fill",
-        iconStatusTooltip: "Concluído",
-        value: "100",
+        iconStatus: "bi bi-stop-circle",
+        iconStatusTooltip: "Aguardando",
+        value: "0",
         name: "Vistoria Intermediária",
         text: "Processos Concluídos",
         data: "16/06/2023",
@@ -118,12 +118,12 @@ const timelines = [
     },
 
     {
-        status: "status-concluido",
+        status: "status-aguardando",
         number: "10",
         link: "#",
-        iconStatus: "bi bi-check-circle-fill",
-        iconStatusTooltip: "Concluído",
-        value: "100",
+        iconStatus: "bi bi-stop-circle",
+        iconStatusTooltip: "Aguardando",
+        value: "0",
         name: "Vistoria Fina",
         text: "Processos Concluídos",
         data: "16/06/2023",
@@ -131,12 +131,12 @@ const timelines = [
     },
 
     {
-        status: "status-concluido",
+        status: "status-aguardando",
         number: "11",
         link: "#",
-        iconStatus: "bi bi-check-circle-fill",
-        iconStatusTooltip: "Concluído",
-        value: "100",
+        iconStatus: "bi bi-stop-circle",
+        iconStatusTooltip: "Aguardando",
+        value: "0",
         name: "Inauguração",
         text: "Processos Concluídos",
         data: "16/06/2023",
@@ -153,11 +153,21 @@ function generateTemplateTimeline(timelines) {
     timelines.forEach((timeline) => {
         html += `
             <li class="stage ${timeline.status}">
-                <span class="number z-3">
-                    <i class="num">${timeline.number}</i>
-                </span>
+                <div class="content-active">
+                    <div class="ring">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <div class="text">Atual</div>
+                            <i class="bi bi-arrow-down"></i>
+                        </div>
+                        <span></span>
+                    </div>
+                </div>
 
-                <a class="card overflow-hidden text-decoration-none" data-bs-toggle="tooltip" data-bs-title="${timeline.iconStatusTooltip}" ${timeline.popup} href="${timeline.link}">
+                <a class="card overflow-hidden text-decoration-none position-relative" data-bs-toggle="tooltip" data-bs-title="${timeline.iconStatusTooltip}" ${timeline.popup} href="${timeline.link}">
+                    <span class="number z-3">
+                        <i class="num">${timeline.number}</i>
+                    </span>
+
                     <article class="card-body text-center p-2 z-2">
                         <div class="d-flex align-items-center justify-content-center flex-column">
                             <span class="fs-2 mb-1 status">
