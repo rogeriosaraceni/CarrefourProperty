@@ -63,6 +63,9 @@
     left: 50%;
     transform: translate(-50%, -30%);
 }
+.principal-cards .link-card:hover figure .content-icon i{
+    color: #fff;
+}
 
 .principal-cards .link-card:hover h4 {
     color: var(--color-purple-400);
