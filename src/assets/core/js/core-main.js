@@ -18,12 +18,12 @@
 /*! --------------------------------------------------------------------
  * DOMPurif protect xss
  * --------------------------------------------------------------------*/
-const sanitizeXss = (string) => DOMPurify.sanitize(string);
+let sanitize = (string) => DOMPurify.sanitize(string);
 
 let inputsApp = document.querySelectorAll(".form-control");
 inputsApp.forEach((item) => {
     item.addEventListener("change", (e) => {
-        const result = sanitizeXss(e.target.value);
+        const result = sanitize(e.target.value);
         console.log(result);
     });
 });
