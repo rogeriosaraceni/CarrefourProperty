@@ -50,6 +50,11 @@ body{
     padding-top: 6.5rem;
     padding-bottom: 1rem;
 }
+@media screen and (max-width: 1200px) {
+    .main-app {
+        padding-top: 3.5rem;
+    }
+}
 
 a {
     transition: all 0.3s ease 0s;
