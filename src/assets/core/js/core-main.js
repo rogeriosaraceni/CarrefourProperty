@@ -17,8 +17,11 @@
 /*! --------------------------------------------------------------------
  * Enable tooltips
  * --------------------------------------------------------------------*/
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-const tooltipList = [...tooltipTriggerList].map((tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl));
+function tooltipTriggerEl() {
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map((tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl));
+}
+tooltipTriggerEl();
 
 /*! --------------------------------------------------------------------
 * mostra senha
@@ -57,7 +60,7 @@ if (divCurrentYear) {
 /*! --------------------------------------------------------------------
  * navigation-active
  * --------------------------------------------------------------------*/
-document.addEventListener("DOMContentLoaded", function () {
+addEventListener("DOMContentLoaded", function () {
     const currentUrl = window.location.pathname;
     const navLinks = document.querySelectorAll(
         `.navbar-nav .nav-item a[href$="${currentUrl}"]`
@@ -74,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /* --------------------------------------------------------------------
 * - btnScrollToTop
 ---------------------------------------------------------------------- */
-window.addEventListener("DOMContentLoaded", function () {
+addEventListener("DOMContentLoaded", function () {
     const btnScrollToTop = document.querySelector('[data-scroll="top"]')
 
     if (btnScrollToTop) {
@@ -89,7 +92,7 @@ window.addEventListener("DOMContentLoaded", function () {
 /* --------------------------------------------------------------------
 * - tab-datatable-scroll-x
 ---------------------------------------------------------------------- */
-document.addEventListener("DOMContentLoaded", function () {
+addEventListener("DOMContentLoaded", function () {
     $(".tab-datatable-scroll-x").DataTable({
         order: [[0, "asc"]],
         ordering: true,
