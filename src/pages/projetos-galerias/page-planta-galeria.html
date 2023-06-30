@@ -261,8 +261,10 @@
 
         <!-- https://fancyapps.com/fancybox/plugins/html/#iframes -->
         <script>
-            Fancybox.bind("[data-fancybox]", {
-                //
+            addEventListener('load', () => {
+                Fancybox.bind("[data-fancybox]", {
+                    //
+                })
             })
         </script>
 

@@ -146,11 +146,13 @@
                 filePath.length > 0 ? fileBtns.style.display = 'block' : fileBtns.style.display = 'none'
             }
 
-            $(document).on('click', 'a.delete', function () {
-                return confirm("Deseja realmente excluir este anexo");
-            });
+            addEventListener('load', () => {
+                $(document).on('click', 'a.delete', function () {
+                    return confirm("Deseja realmente excluir este anexo");
+                });
 
-            $('.tagsinput').tagsInput({ placeholder: 'Add Lucs' });
+                $('.tagsinput').tagsInput({ placeholder: 'Add Lucs' });
+            })
         </script>
     </body>
 </html>
