@@ -1,25 +1,27 @@
 /* ////////////////////////////////////////////////////////////////////
-*
-*  JS CORE form
-*
-* - convertToFloatNumber
-* - formataMascara
-* - FormataValor
-* - numberFormat
-* - stringToNumber
-* - somenteNumero
-*
-* //////////////////////////////////////////////////////////////////// */
+    *
+    *  JS CORE form
+    *
+    * - convertToFloatNumber
+    * - formataMascara
+    * - FormataValor
+    * - numberFormat
+    * - stringToNumber
+    * - somenteNumero
+    *
+    * //////////////////////////////////////////////////////////////////// */
 
 /*! --------------------------------------------------------------------
-* - convertToFloatNumber
-* --------------------------------------------------------------------*/
+    * - convertToFloatNumber
+    * --------------------------------------------------------------------*/
 var convertToFloatNumber = function (value) {
     value = value.toString();
     if (value.indexOf(".") !== -1 && value.indexOf(",") !== -1) {
         if (value.indexOf(".") < value.indexOf(",")) {
             //inglês
-            return parseFloat(value.split(".").join("").split(",").join("."));
+            return parseFloat(
+                value.split(".").join("").split(",").join(".")
+            );
         } else {
             //português
             return parseFloat(value.split(",").join("."));
@@ -30,14 +32,16 @@ var convertToFloatNumber = function (value) {
 };
 
 /*! --------------------------------------------------------------------
-* - formataMascara
-* --------------------------------------------------------------------*/
+    * - formataMascara
+    * --------------------------------------------------------------------*/
 var formataMascara = function (value, casas) {
     value = value.toString();
     if (value.indexOf(".") !== -1 && value.indexOf(",") !== -1) {
         if (value.indexOf(".") < value.indexOf(",")) {
             //inglês
-            return parseFloat(value.split(".").join("").split(",").join("."));
+            return parseFloat(
+                value.split(".").join("").split(",").join(".")
+            );
         } else {
             //português
             return parseFloat(value.split(",").join("."));
@@ -48,8 +52,8 @@ var formataMascara = function (value, casas) {
 };
 
 /*! --------------------------------------------------------------------
-* - FormataValor
-* --------------------------------------------------------------------*/
+    * - FormataValor
+    * --------------------------------------------------------------------*/
 function FormataValor(objeto, teclapres, tammax, decimais) {
     if (teclapres.which == 13) {
         mudaInput(objeto);
@@ -121,176 +125,182 @@ function FormataValor(objeto, teclapres, tammax, decimais) {
             (tecla >= 48 && tecla <= 57) ||
             (tecla >= 96 && tecla <= 105)
         ) {
-			
-			retorno = "";
-			 
-			if ( window.getSelection().toString().length == objeto.value.length ){
-				retorno = "0,00";
-				window.event.preventDefault();
-				window.event.stopPropagation();
-			}else{
-				if (decimais > 0) {
-					if (tam <= decimais) {
-						retorno = "0," + vr;
-					}
-					if (tam == decimais + 1 && tecla == 8) {
-						retorno =
-							vr.substr(0, tam - decimais) +
-							decimal +
-							vr.substr(tam - decimais, tam);
-					}
-					if (
-						tam > decimais + 1 &&
-						tam <= decimais + 3 &&
-						vr.substr(0, 1) == "0"
-					) {
-						retorno =
-							vr.substr(1, tam - (decimais + 1)) +
-							decimal +
-							vr.substr(tam - decimais, tam);
-					}
-					if (
-						tam > decimais + 1 &&
-						tam <= decimais + 3 &&
-						vr.substr(0, 1) != "0"
-					) {
-						retorno =
-							vr.substr(0, tam - decimais) +
-							decimal +
-							vr.substr(tam - decimais, tam);
-					}
-					if (tam >= decimais + 4 && tam <= decimais + 6) {
-						retorno =
-							vr.substr(0, tam - (decimais + 3)) +
-							milhar +
-							vr.substr(tam - (decimais + 3), 3) +
-							decimal +
-							vr.substr(tam - decimais, tam);
-					}
-					if (tam >= decimais + 7 && tam <= decimais + 9) {
-						retorno =
-							vr.substr(0, tam - (decimais + 6)) +
-							milhar +
-							vr.substr(tam - (decimais + 6), 3) +
-							milhar +
-							vr.substr(tam - (decimais + 3), 3) +
-							decimal +
-							vr.substr(tam - decimais, tam);
-					}
-					if (tam >= decimais + 10 && tam <= decimais + 12) {
-						retorno =
-							vr.substr(0, tam - (decimais + 9)) +
-							milhar +
-							vr.substr(tam - (decimais + 9), 3) +
-							milhar +
-							vr.substr(tam - (decimais + 6), 3) +
-							milhar +
-							vr.substr(tam - (decimais + 3), 3) +
-							decimal +
-							vr.substr(tam - decimais, tam);
-					}
-					if (tam >= decimais + 13 && tam <= decimais + 15) {
-						retorno =
-							vr.substr(0, tam - (decimais + 12)) +
-							milhar +
-							vr.substr(tam - (decimais + 12), 3) +
-							milhar +
-							vr.substr(tam - (decimais + 9), 3) +
-							milhar +
-							vr.substr(tam - (decimais + 6), 3) +
-							milhar +
-							vr.substr(tam - (decimais + 3), 3) +
-							decimal +
-							vr.substr(tam - decimais, tam);
-					}
-				} else if (decimais == 0) {
-					if (tam <= 3) {
-						retorno = vr;
-					}
-					if (tam >= 4 && tam <= 6) {
-						if (tecla == 8) {
-							retorno = vr.substr(0, tam);
+            retorno = "";
 
-							if (negativo) retorno = "-" + retorno;
-							objeto.value = retorno;
+            if (
+                window.getSelection().toString().length ==
+                objeto.value.length
+            ) {
+                retorno = "0,00";
+                window.event.preventDefault();
+                window.event.stopPropagation();
+            } else {
+                if (decimais > 0) {
+                    if (tam <= decimais) {
+                        retorno = "0," + vr;
+                    }
+                    if (tam == decimais + 1 && tecla == 8) {
+                        retorno =
+                            vr.substr(0, tam - decimais) +
+                            decimal +
+                            vr.substr(tam - decimais, tam);
+                    }
+                    if (
+                        tam > decimais + 1 &&
+                        tam <= decimais + 3 &&
+                        vr.substr(0, 1) == "0"
+                    ) {
+                        retorno =
+                            vr.substr(1, tam - (decimais + 1)) +
+                            decimal +
+                            vr.substr(tam - decimais, tam);
+                    }
+                    if (
+                        tam > decimais + 1 &&
+                        tam <= decimais + 3 &&
+                        vr.substr(0, 1) != "0"
+                    ) {
+                        retorno =
+                            vr.substr(0, tam - decimais) +
+                            decimal +
+                            vr.substr(tam - decimais, tam);
+                    }
+                    if (tam >= decimais + 4 && tam <= decimais + 6) {
+                        retorno =
+                            vr.substr(0, tam - (decimais + 3)) +
+                            milhar +
+                            vr.substr(tam - (decimais + 3), 3) +
+                            decimal +
+                            vr.substr(tam - decimais, tam);
+                    }
+                    if (tam >= decimais + 7 && tam <= decimais + 9) {
+                        retorno =
+                            vr.substr(0, tam - (decimais + 6)) +
+                            milhar +
+                            vr.substr(tam - (decimais + 6), 3) +
+                            milhar +
+                            vr.substr(tam - (decimais + 3), 3) +
+                            decimal +
+                            vr.substr(tam - decimais, tam);
+                    }
+                    if (tam >= decimais + 10 && tam <= decimais + 12) {
+                        retorno =
+                            vr.substr(0, tam - (decimais + 9)) +
+                            milhar +
+                            vr.substr(tam - (decimais + 9), 3) +
+                            milhar +
+                            vr.substr(tam - (decimais + 6), 3) +
+                            milhar +
+                            vr.substr(tam - (decimais + 3), 3) +
+                            decimal +
+                            vr.substr(tam - decimais, tam);
+                    }
+                    if (tam >= decimais + 13 && tam <= decimais + 15) {
+                        retorno =
+                            vr.substr(0, tam - (decimais + 12)) +
+                            milhar +
+                            vr.substr(tam - (decimais + 12), 3) +
+                            milhar +
+                            vr.substr(tam - (decimais + 9), 3) +
+                            milhar +
+                            vr.substr(tam - (decimais + 6), 3) +
+                            milhar +
+                            vr.substr(tam - (decimais + 3), 3) +
+                            decimal +
+                            vr.substr(tam - decimais, tam);
+                    }
+                } else if (decimais == 0) {
+                    if (tam <= 3) {
+                        retorno = vr;
+                    }
+                    if (tam >= 4 && tam <= 6) {
+                        if (tecla == 8) {
+                            retorno = vr.substr(0, tam);
 
-							window.event.cancelBubble = true;
-							window.event.returnValue = false;
-						}
-						retorno = vr.substr(0, tam - 3) + milhar + vr.substr(tam - 3, 3);
-					}
-					if (tam >= 7 && tam <= 9) {
-						if (tecla == 8) {
-							retorno = vr.substr(0, tam);
+                            if (negativo) retorno = "-" + retorno;
+                            objeto.value = retorno;
 
-							if (negativo) retorno = "-" + retorno;
-							objeto.value = retorno;
+                            window.event.cancelBubble = true;
+                            window.event.returnValue = false;
+                        }
+                        retorno =
+                            vr.substr(0, tam - 3) +
+                            milhar +
+                            vr.substr(tam - 3, 3);
+                    }
+                    if (tam >= 7 && tam <= 9) {
+                        if (tecla == 8) {
+                            retorno = vr.substr(0, tam);
 
-							window.event.cancelBubble = true;
-							window.event.returnValue = false;
-						}
-						retorno =
-							vr.substr(0, tam - 6) +
-							milhar +
-							vr.substr(tam - 6, 3) +
-							milhar +
-							vr.substr(tam - 3, 3);
-					}
-					if (tam >= 10 && tam <= 12) {
-						if (tecla == 8) {
-							retorno = vr.substr(0, tam);
+                            if (negativo) retorno = "-" + retorno;
+                            objeto.value = retorno;
 
-							if (negativo) retorno = "-" + retorno;
-							objeto.value = retorno;
+                            window.event.cancelBubble = true;
+                            window.event.returnValue = false;
+                        }
+                        retorno =
+                            vr.substr(0, tam - 6) +
+                            milhar +
+                            vr.substr(tam - 6, 3) +
+                            milhar +
+                            vr.substr(tam - 3, 3);
+                    }
+                    if (tam >= 10 && tam <= 12) {
+                        if (tecla == 8) {
+                            retorno = vr.substr(0, tam);
 
-							window.event.cancelBubble = true;
-							window.event.returnValue = false;
-						}
-						retorno =
-							vr.substr(0, tam - 9) +
-							milhar +
-							vr.substr(tam - 9, 3) +
-							milhar +
-							vr.substr(tam - 6, 3) +
-							milhar +
-							vr.substr(tam - 3, 3);
-					}
+                            if (negativo) retorno = "-" + retorno;
+                            objeto.value = retorno;
 
-					if (tam >= 13 && tam <= 15) {
-						if (tecla == 8) {
-							retorno = vr.substr(0, tam);
+                            window.event.cancelBubble = true;
+                            window.event.returnValue = false;
+                        }
+                        retorno =
+                            vr.substr(0, tam - 9) +
+                            milhar +
+                            vr.substr(tam - 9, 3) +
+                            milhar +
+                            vr.substr(tam - 6, 3) +
+                            milhar +
+                            vr.substr(tam - 3, 3);
+                    }
 
-							if (negativo) retorno = "-" + retorno;
-							objeto.value = retorno;
+                    if (tam >= 13 && tam <= 15) {
+                        if (tecla == 8) {
+                            retorno = vr.substr(0, tam);
 
-							window.event.cancelBubble = true;
-							window.event.returnValue = false;
-						}
-						retorno =
-							vr.substr(0, tam - 12) +
-							milhar +
-							vr.substr(tam - 12, 3) +
-							milhar +
-							vr.substr(tam - 9, 3) +
-							milhar +
-							vr.substr(tam - 6, 3) +
-							milhar +
-							vr.substr(tam - 3, 3);
-					}
-				}
-			
-			}
+                            if (negativo) retorno = "-" + retorno;
+                            objeto.value = retorno;
+
+                            window.event.cancelBubble = true;
+                            window.event.returnValue = false;
+                        }
+                        retorno =
+                            vr.substr(0, tam - 12) +
+                            milhar +
+                            vr.substr(tam - 12, 3) +
+                            milhar +
+                            vr.substr(tam - 9, 3) +
+                            milhar +
+                            vr.substr(tam - 6, 3) +
+                            milhar +
+                            vr.substr(tam - 3, 3);
+                    }
+                }
+            }
 
             if (negativo) retorno = "-" + retorno;
             objeto.value = retorno;
         }
-    } else if ( tecla == 46 ){
-			if ( window.getSelection().toString().length == objeto.value.length ){
-				objeto.value = "0,00";
-				window.event.preventDefault();
-				window.event.stopPropagation();
-			}
-	}else if (
+    } else if (tecla == 46) {
+        if (
+            window.getSelection().toString().length == objeto.value.length
+        ) {
+            objeto.value = "0,00";
+            window.event.preventDefault();
+            window.event.stopPropagation();
+        }
+    } else if (
         window.event.keyCode != 8 &&
         window.event.keyCode != 9 &&
         window.event.keyCode != 13 &&
@@ -308,8 +318,8 @@ function FormataValor(objeto, teclapres, tammax, decimais) {
 }
 
 /*! --------------------------------------------------------------------
-* - numberFormat
-* --------------------------------------------------------------------*/
+    * - numberFormat
+    * --------------------------------------------------------------------*/
 function numberFormat(number, decimals, dec_point, thousands_sep) {
     var n = !isFinite(+number) ? 0 : +number,
         prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
@@ -319,7 +329,9 @@ function numberFormat(number, decimals, dec_point, thousands_sep) {
             var k = Math.pow(10, prec);
             return Math.round(n * k) / k;
         },
-        s = (prec ? toFixedFix(n, prec) : Math.round(n)).toString().split(".");
+        s = (prec ? toFixedFix(n, prec) : Math.round(n))
+            .toString()
+            .split(".");
     if (s[0].length > 3) {
         s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
     }
@@ -331,29 +343,31 @@ function numberFormat(number, decimals, dec_point, thousands_sep) {
 }
 
 /*! --------------------------------------------------------------------
-* - stringToNumber
-* --------------------------------------------------------------------*/
+    * - stringToNumber
+    * --------------------------------------------------------------------*/
 function stringToNumber(value) {
-    if (typeof value === 'undefined') {
-        return '';
+    if (typeof value === "undefined") {
+        return "";
     }
 
-    value = value.toString().replace(/[%]/g, '');
+    value = value.toString().replace(/[%]/g, "");
 
-    let temp = '';
+    let temp = "";
     // console.log(value);
-    if (value.indexOf('.') !== -1 && value.indexOf(',') !== -1) {
-        if (value.indexOf('.') < value.indexOf(',')) {
+    if (value.indexOf(".") !== -1 && value.indexOf(",") !== -1) {
+        if (value.indexOf(".") < value.indexOf(",")) {
             // inglês
-            temp = parseFloat(value.split('.').join('').split(',').join('.'));
+            temp = parseFloat(
+                value.split(".").join("").split(",").join(".")
+            );
         } else {
             // português
-            temp = parseFloat(value.split(',').join(''));
+            temp = parseFloat(value.split(",").join(""));
         }
-    } else if (value.indexOf('.') !== -1) {
+    } else if (value.indexOf(".") !== -1) {
         temp = parseFloat(value);
-    } else if (value.indexOf(',') !== -1) {
-        temp = parseFloat(value.split(',').join('.'));
+    } else if (value.indexOf(",") !== -1) {
+        temp = parseFloat(value.split(",").join("."));
     } else {
         temp = parseFloat(value);
     }
@@ -362,9 +376,9 @@ function stringToNumber(value) {
 }
 
 /*! --------------------------------------------------------------------
-* somenteNumero
-* --------------------------------------------------------------------*/
+    * somenteNumero
+    * --------------------------------------------------------------------*/
 function somenteNumero(e) {
     var i = window.evt ? evt.keyCode : e.which;
-    return i > 47 && i < 58 || (8 == i || 0 == i || 45 == i)
+    return (i > 47 && i < 58) || 8 == i || 0 == i || 45 == i;
 }

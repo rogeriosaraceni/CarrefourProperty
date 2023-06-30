@@ -1,28 +1,32 @@
 /* ////////////////////////////////////////////////////////////////////
- *
- *  JS CORE main
- *
- * - Enable tooltips
- * - mostra senha
- * - currentYear
- * - navbarSideCollapse
- * - navigation-active
- * - btnScrollToTop
- * - tab-datatable-scroll-x
- * - DOMPurif protect xss
- *
- *
- * //////////////////////////////////////////////////////////////////// */
+    *
+    *  JS CORE main
+    *
+    * - Enable tooltips
+    * - mostra senha
+    * - currentYear
+    * - navbarSideCollapse
+    * - navigation-active
+    * - btnScrollToTop
+    * - tab-datatable-scroll-x
+    * - DOMPurif protect xss
+    *
+    *
+    * //////////////////////////////////////////////////////////////////// */
 
 /*! --------------------------------------------------------------------
-* Enable tooltips
-* --------------------------------------------------------------------*/
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-const tooltipList = [...tooltipTriggerList].map((tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl));
+    * Enable tooltips
+    * --------------------------------------------------------------------*/
+const tooltipTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="tooltip"]'
+);
+const tooltipList = [...tooltipTriggerList].map(
+    (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+);
 
 /*! --------------------------------------------------------------------
-* mostra senha
-* --------------------------------------------------------------------*/
+    * mostra senha
+    * --------------------------------------------------------------------*/
 let btnShowAllPassword = document.querySelectorAll(".btn-showPass");
 
 btnShowAllPassword.forEach((item) => {
@@ -30,16 +34,18 @@ btnShowAllPassword.forEach((item) => {
         item.children[0].classList.toggle("bi-unlock");
         const inputPass = item.parentNode.children[0];
         const type =
-            inputPass.getAttribute("type") === "password" ? "text" : "password";
+            inputPass.getAttribute("type") === "password"
+                ? "text"
+                : "password";
         inputPass.setAttribute("type", type);
     });
 });
 
 /*! --------------------------------------------------------------------
-* currentYear
-* --------------------------------------------------------------------*/
+    * currentYear
+    * --------------------------------------------------------------------*/
 const currentYear = new Date().getFullYear();
-const divCurrentYear = document.querySelector('[data-js="currentYear"]')
+const divCurrentYear = document.querySelector('[data-js="currentYear"]');
 if (divCurrentYear) {
     divCurrentYear.textContent = currentYear;
 }
@@ -49,14 +55,18 @@ if (divCurrentYear) {
 ---------------------------------------------------------------------- */
 (() => {
     "use strict";
-    document.querySelector("#navbarSideCollapse")?.addEventListener("click", () => {
-        document.querySelector(".offcanvas-collapse").classList.toggle("open");
-    });
+    document
+        .querySelector("#navbarSideCollapse")
+        ?.addEventListener("click", () => {
+            document
+                .querySelector(".offcanvas-collapse")
+                .classList.toggle("open");
+        });
 })();
 
 /*! --------------------------------------------------------------------
-* navigation-active
-* --------------------------------------------------------------------*/
+    * navigation-active
+    * --------------------------------------------------------------------*/
 addEventListener("DOMContentLoaded", function () {
     const currentUrl = window.location.pathname;
     const navLinks = document.querySelectorAll(
@@ -75,14 +85,18 @@ addEventListener("DOMContentLoaded", function () {
 * - btnScrollToTop
 ---------------------------------------------------------------------- */
 addEventListener("DOMContentLoaded", function () {
-    const btnScrollToTop = document.querySelector('[data-scroll="top"]')
+    const btnScrollToTop = document.querySelector('[data-scroll="top"]');
 
     if (btnScrollToTop) {
-        btnScrollToTop.onclick = () => window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-        window.onscroll = () => window.scrollY > 10 ? btnScrollToTop.style.opacity = 1 : btnScrollToTop.style.opacity = 0
+        btnScrollToTop.onclick = () =>
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        window.onscroll = () =>
+            window.scrollY > 10
+                ? (btnScrollToTop.style.opacity = 1)
+                : (btnScrollToTop.style.opacity = 0);
     }
 });
 
@@ -116,15 +130,15 @@ addEventListener("DOMContentLoaded", function () {
     });
 
     $('[data-row="delete"]').click(function () {
-        if (!confirm('Você tem certeza que deseja excluir?')) {
+        if (!confirm("Você tem certeza que deseja excluir?")) {
             return false;
         }
-    })
-})
+    });
+});
 
 /*! --------------------------------------------------------------------
-* DOMPurif protect xss
-* --------------------------------------------------------------------*/
+    * DOMPurif protect xss
+    * --------------------------------------------------------------------*/
 const sanitize = (string) => DOMPurify.sanitize(string);
 
 let inputsApp = document.querySelectorAll(".form-control");
