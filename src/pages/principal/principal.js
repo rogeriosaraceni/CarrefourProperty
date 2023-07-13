@@ -30,7 +30,7 @@ const cards = [
         nameClassColor: "bg-app-red-400",
     },
     {
-        link: "../projetos-galerias/page-planta-galeria.html",
+        link: "../pg-planta-galeria/index.html",
         icon: "bi bi-clipboard2-check text-app-orange-400",
         name: "Projetos Galerias",
         nameClassColor: "bg-app-orange-400",
