@@ -1,20 +1,63 @@
+<style>
+    .nav-fill .nav-link{
+        color: var(--color-purple-400);
+        transition: all 0.3s;
+        background-color: #f8f8f8;
+    }
+    .nav-fill .nav-link:hover{
+        background-color: #efefef;
+    }
+    .nav-fill .nav-link.active:hover{
+        background-color: var(--bs-nav-pills-link-active-bg);
+    }
+</style>
+
 <div class="card">
     <div class="card-body">
         <ul class="nav nav-pills nav-fill gap-2">
             <li class="nav-item">
-                <a data-link="step" class="nav-link border" href="./index1.html">1</a>
+                <a data-link="step" class="nav-link border" href="./index1.html">
+                    <div class="d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-envelope fs-5"></i>
+                        <span>1-Disparar email</span>
+                    </div>
+                </a>
             </li>
+
             <li class="nav-item">
-                <a data-link="step" class="nav-link border" href="./index2.html">2</a>
+                <a data-link="step" class="nav-link border" href="./index2.html">
+                    <div class="d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-pencil-square fs-5"></i>
+                        <span>2-Preencher Dados</span>
+                    </div>
+                </a>
             </li>
+
             <li class="nav-item">
-                <a data-link="step" class="nav-link border" href="./index3.html">3</a>
+                <a data-link="step" class="nav-link border" href="./index3.html">
+                    <div class="d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-clipboard2-check fs-5"></i>
+                        <span>3-Termo de Reponsabilidade</span>
+                    </div>
+                </a>
             </li>
+
             <li class="nav-item">
-                <a data-link="step" class="nav-link border" href="./index4.html">4</a>
+                <a data-link="step" class="nav-link border" href="./index4.html">
+                    <div class="d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-file-text fs-5"></i>
+                        <span>4-Análise de Projeto</span>
+                    </div>
+                </a>
             </li>
+
             <li class="nav-item">
-                <a data-link="step" class="nav-link border" href="./index5.html">5</a>
+                <a data-link="step" class="nav-link border" href="./index5.html">
+                    <div class="d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-layers fs-5 fs-5"></i>
+                        <span>5-Arquivos Boas Vindas</span>
+                    </div>
+                </a>
             </li>
         </ul>
     </div>
