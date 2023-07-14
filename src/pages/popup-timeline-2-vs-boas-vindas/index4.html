@@ -2,20 +2,22 @@
 <html lang="pt-br">
     <head>
         <include src="./includes/head.html"></include>
+
+        <style>
+            #clone-row .content-clone:first-child .btn-del{ display: none;}
+        </style>
     </head>
 
     <body class="body-popup">
         <include src="./pages/popup-timeline-2-vs-boas-vindas/content-title.html"></include>
         <include src="./pages/popup-timeline-2-vs-boas-vindas/content-tabs.html"></include>
 
-        <div class="card">
-            <div class="card-body">
-                <div class="section-title">
-                    <span class="title">Análise de Projeto</span>
-                </div>
-
-                <form action="" method="post">
-                    <h6>Preenchimento das instalações de sua loja</h6>
+        <form action="" method="post">
+            <div class="card">
+                <div class="card-body">
+                    <div class="section-title">
+                        <span class="title">Preenchimento das Instalações de Sua Loja</span>
+                    </div>
 
                     <div class="row">
                         <label class="d-flex align-items-baseline gap-1 col-lg-6">
@@ -179,8 +181,122 @@
                     <div class="d-flex justify-content-end">
                         <button type="submit" class="btn btn-primary">Salvar</button>
                     </div>
-                </form>
+                </div>
             </div>
-        </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="section-title">
+                        <span class="title">Listagem dos Equipamentos a Serem Utilizados na Sua Loja</span>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-fixed" id="clone-row">
+                            <thead>
+                                <tr>
+                                    <td style="width: 300px" class="text-center">Equipamentos</td>
+                                    <td style="width: 100px" class="text-center">Quant.</td>
+                                    <td style="width: 150px" class="text-center">Potência(w)</td>
+                                    <td style="width: 100px" class="text-center">Del</td>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr class="content-clone">
+                                    <td>
+                                        <input type="text" name="equipamento_1" id="equipamento_1" class="form-control" value="">
+                                    </td>
+                                    <td>
+                                        <input type="number" name="qtd_1" id="qtd_1" class="form-control text-center" value="">
+                                    </td>
+                                    <td>
+                                        <input type="number" name="potencia_1" id="potencia_1" class="form-control text-center" value="">
+                                    </td>
+
+                                    <td class="text-center">
+                                        <button
+                                            type="button"
+                                            id="btn-del"
+                                            class="btn btn-danger btn-small btn-del"
+                                            data-bs-toggle="tooltip"
+                                            data-bs-title="Del">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <button type="button" class="btn btn-success mb-0" id="btnAdd-clone">+ Adicionar</button>
+                </div>
+            </div>
+        </form>
+
+        <script>
+            window.addEventListener('load', () => {
+                function cloneForm() {
+                    let i = 0;
+
+                    function updateFieldNumbers() {
+                        $("#clone-row .content-clone").each(function (index) {
+                            const row = $(this);
+                            const fields = row.find(
+                                "select, input, a[id^='btn-del'], button[id^='btn-del']"
+                            );
+                            // Atualiza os atributos name, id e value dos campos
+                            fields.each(function () {
+                                const field = $(this);
+                                const name = field.attr("name");
+                                const id = field.attr("id");
+
+                                // / indica o início da expressão regular.
+                                // \d representa qualquer dígito numérico.
+                                // + indica que o dígito numérico pode aparecer uma ou mais vezes consecutivas.
+                                // $ indica o final da string.
+                                // / indica o final da expressão regular.
+                                //expressão regular /\d+$/ procura uma ou mais ocorrências consecutivas de dígitos numéricos no final da string.
+
+                                if (name) {
+                                    //atualiza o valor do atributo name
+                                    field.attr("name", name.replace(/\d+$/, index + 1));
+                                }
+                                if (id) {
+                                    //atualiza o valor do atributo name
+                                    field.attr("id", id.replace(/\d+$/, index + 1));
+                                }
+                            });
+                        });
+                    }
+
+                    $("#btnAdd-clone").click(function () {
+                        const rowClone = $("#clone-row .content-clone:first")
+                            .clone()
+                            .appendTo("#clone-row");
+                        rowClone.find("input").val(""); // Define o valor dos campos clonados como vazio
+
+                        //reativa tooltips
+                        $('[data-bs-toggle="tooltip"]').tooltip();
+
+                        i++;
+                        updateFieldNumbers();
+                    });
+
+                    $("#clone-row").on("click", ".content-clone .btn-del", function () {
+                        if (!confirm("Você tem certeza que deseja excluir?")) {
+                            return false;
+                        }
+
+                        //destroy tooltip
+                        $('[data-bs-toggle="tooltip"]').tooltip('dispose')
+
+                        $(this).closest(".content-clone").remove();
+                        updateFieldNumbers();
+                    });
+                }
+
+                cloneForm();
+            })
+        </script>
     </body>
 </html>
