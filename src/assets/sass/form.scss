@@ -4,6 +4,7 @@
 *
 * - input
 * - form-check-label
+* - form-check-input
 * - form-group
 * - input-group-text
 * - label
@@ -43,6 +44,13 @@ input[type=number][readonly] {
 .form-check-label {
     display: flex;
     align-items: center;
+}
+
+/* --------------------------------------------------------------------
+* - form-check-input
+* -------------------------------------------------------------------- */
+.form-check-input {
+    border-color: #aaa;
 }
 
 /* --------------------------------------------------------------------
